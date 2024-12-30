@@ -6,7 +6,7 @@ function blogs() {
   return ( 
     <div>
       <TitleBanner 
-      title={'Blogs'}
+      title={'Blog'}
       backgroundImage={backgroundImage}/>    </div>
   )
 }
