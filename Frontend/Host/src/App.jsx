@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Gallery from './Pages/GalleryPage/Gallery'
-function App() {
- 
+import React from 'react';
+import Blogs from './pages/Blogs';
 
+function App() {
   return (
-    <>
-      <Gallery/>
-    </>
+    <div>
+      <Blogs />
+    </div>
   )
 }
 
-export default App
+export default App;
