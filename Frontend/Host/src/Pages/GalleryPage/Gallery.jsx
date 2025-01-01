@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Gallery.module.css";
 import PhotoCard from "../../Components/Gallery/PhotoCard";
 import LightboxModal from "../../Components/Gallery/LightboxModal";
@@ -19,9 +19,23 @@ const Gallery = () => {
     ];
 
     const [currentPhoto, setCurrentPhoto] = useState(null);
+    const [nextPhoto, setNextPhoto]= useState(null);
+    const [prevPhoto, setPrevPhoto]= useState(null);
 
-    const openModal = (photo) => setCurrentPhoto(photo);
-    const closeModal = () => setCurrentPhoto(null);
+    const openModal = (photo) => {
+        setCurrentPhoto(photo);
+        const index= photos.indexOf(photo);
+        setNextPhoto(index< photos.length -1? photos[index + 1]: null);
+        setPrevPhoto(index>0 ? photos[index-1]: null);
+    };
+    const closeModal = () => {
+        setCurrentPhoto(null);
+        setNextPhoto(null);
+        setPrevPhoto(null);
+    };
+    useEffect(()=>{
+        console.log(nextPhoto);
+    },[nextPhoto])
 
     return (
         <div className={style.Gallery_container}>
@@ -35,11 +49,14 @@ const Gallery = () => {
                 <p>International giving can be complex. We've donated $321,000 to 20 countries charities in just the past five years.</p>
             </div>
             <div className={style.Photo_area}>
-                {photos.map((photo, index) => (
-                    <PhotoCard key={index} photo_src={photo} onClick={() => openModal(photo)} />
-                ))}
+                {photos.map((photo, index, arr) => {
+                    const next=arr[index+1];
+                    return (
+                    <PhotoCard key={index} photo_src={photo} onClick={() =>openModal(photo)}/>
+                )})}
             </div>
-            {currentPhoto && <LightboxModal photo={currentPhoto} onClose={closeModal} />}
+            {currentPhoto && <LightboxModal photo={currentPhoto} onClose={closeModal} openModal={openModal} 
+                                nextPhoto={nextPhoto} prevPhoto={prevPhoto} />}
         </div>
     );
 };

@@ -10,6 +10,7 @@ const PhotoCard = ({ photo_src, onClick }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={onClick}
+            
         >
             <img src={photo_src} className={style.Curr_photo} />
             <div
