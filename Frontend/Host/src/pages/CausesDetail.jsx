@@ -1,9 +1,11 @@
 import TitleBanner from "../components/TitleBanner";
 import CausesCard from "../components/Causes/CausesCard";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Causes = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const causeDetails = {
     1: {
       title: "Many different ways today to find",
@@ -16,18 +18,6 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 1!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 1!"),
-        },
-      ],
     },
     2: {
       title: "Fundraiser for Bella and her friends",
@@ -40,18 +30,6 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 2!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 2!"),
-        },
-      ],
     },
     3: {
       title: "New clothes for highland children",
@@ -64,18 +42,6 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 3!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 3!"),
-        },
-      ],
     },
     4: {
       title: "Keep Teachers in the Classroom",
@@ -88,18 +54,6 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 4!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 4!"),
-        },
-      ],
     },
     5: {
       title: "Supporting Lifeline charity group",
@@ -112,18 +66,6 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 5!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 5!"),
-        },
-      ],
     },
     6: {
       title: "Big charity: build school for poor",
@@ -136,25 +78,28 @@ const Causes = () => {
         date: "15 September 2017",
         hits: "3085",
       },
-      buttons: [
-        {
-          label: "Prev",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Prev clicked for cause 6!"),
-        },
-        {
-          label: "Next",
-          style: "bg-primary text-white hover:bg-black",
-          onClick: () => alert("Next clicked for cause 6!"),
-        },
-      ],
     },
   };
+
   const cause = causeDetails[id];
 
   if (!cause) {
     return <div>Cause not found</div>;
   }
+
+  const handlePrev = () => {
+    const prevId = parseInt(id) - 1;
+    if (prevId >= 1) {
+      navigate(`/causes/${prevId}`);
+    }
+  };
+
+  const handleNext = () => {
+    const nextId = parseInt(id) + 1;
+    if (nextId <= Object.keys(causeDetails).length) {
+      navigate(`/causes/${nextId}`);
+    }
+  };
 
   return (
     <div className="font-poppins bg-[#F3F5F7]">
@@ -162,7 +107,7 @@ const Causes = () => {
         title="Causes"
         backgroundImage="https://demo.joomshaper.com/2017/hope/images/demo/page-title-bg.jpg"
       />
-      <div className="py-[95px] mx-10 flex flex-col items-center">
+      <div className="py-[95px] sm:mx-10 mx-3 flex flex-col items-center">
         <CausesCard
           causesImage={cause.image}
           Title={cause.title}
@@ -170,7 +115,18 @@ const Causes = () => {
           detailView={true}
           extraFields={{
             additionalInfo: cause.additionalInfo,
-            buttons: cause.buttons,
+            buttons: [
+              {
+                label: "Prev",
+                style: "bg-primary text-white hover:bg-black",
+                onClick: handlePrev,
+              },
+              {
+                label: "Next",
+                style: "bg-primary text-white hover:bg-black",
+                onClick: handleNext,
+              },
+            ],
           }}
         />
       </div>

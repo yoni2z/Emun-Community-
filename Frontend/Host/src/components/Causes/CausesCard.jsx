@@ -32,7 +32,7 @@ const CausesCard = ({
         {detailView && (
           <div className="mb-5">
             {extraFields.additionalInfo && (
-              <div className="flex flex-row">
+              <div className="flex flex-row flex-wrap">
                 <p className="text-secondary pr-3">
                   {extraFields.additionalInfo.author}
                 </p>
