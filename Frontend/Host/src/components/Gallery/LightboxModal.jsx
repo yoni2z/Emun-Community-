@@ -11,6 +11,7 @@ const LightboxModal=({photo, onClose,openModal, nextPhoto, prevPhoto})=>{
                 <img src={photo} alt="Enlarged View" className={style.modal_image}/>
                 <button className={style.close_button} onClick={onClose}><i className="fas fa-close"/></button>
             </div>
+            <h6></h6>
             <button className={style.previous_button} onClick={(e)=>{
                 e.stopPropagation();
                 if (prevPhoto) openModal(prevPhoto);
