@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Router>
-        <Route path="/" component={<Blogs />} />
+        <Route path="/blogs" component={<Blogs />} />
       </Router>
     </>
   )
