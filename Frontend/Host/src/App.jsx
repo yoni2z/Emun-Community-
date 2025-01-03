@@ -1,11 +1,14 @@
 import React from 'react';
 import Blogs from './pages/Blogs';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Blogs />
-    </div>
+    <>
+      <Router>
+        <Route path="/" component={<Blogs />} />
+      </Router>
+    </>
   )
 }
 
