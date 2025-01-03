@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BlogCard from './BlogCard';
 
 function BlogPosts({ posts }) {
-  const POSTS_PER_PAGE = 7; // Number of posts per page
+  const POSTS_PER_PAGE = 3; // Number of posts per page
   const [currentPage, setCurrentPage] = useState(1);
 
   // Scroll to the top of the page when currentPage changes
@@ -30,9 +30,9 @@ function BlogPosts({ posts }) {
       {/* First post (full width) */}
       {currentPosts.length > 0 && (
         <BlogCard
-          postImage={currentPosts[0].postImage}
+          postImage={currentPosts[0].image}
           category={currentPosts[0].category}
-          postTitle={currentPosts[0].postTitle}
+          postTitle={currentPosts[0].title}
           description={currentPosts[0].description}
         />
       )}
@@ -42,9 +42,9 @@ function BlogPosts({ posts }) {
         {currentPosts.slice(1).map((post, index) => (
           <BlogCard
             key={index}
-            postImage={post.postImage}
+            postImage={post.image}
             category={post.category}
-            postTitle={post.postTitle}
+            postTitle={post.title}
             description={post.description}
           />
         ))}

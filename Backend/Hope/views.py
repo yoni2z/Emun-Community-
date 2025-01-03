@@ -2,23 +2,25 @@ from django.shortcuts import render
 from rest_framework import viewsets
 
 from .models import (
-    PhotoGallery,
+    Gallery,
     Blog, Cause,
     Client,
+    Volunteer,
 )
 
 from .serializer import (
-    PhotoGallerySerializer,
+    GallerySerializer,
     BlogSerializer,
     CauseSerializer,
     ClientSerializer,
+    VolunteerSerializer,
 )
 
 # Create your views here.
 
-class PhotoGalleryViewSet(viewsets.ModelViewSet):
-    queryset = PhotoGallery.objects.all()
-    serializer_class = PhotoGallerySerializer
+class GalleryViewSet(viewsets.ModelViewSet):
+    queryset = Gallery.objects.all()
+    serializer_class = GallerySerializer
 
 class BlogViewSet(viewsets.ModelViewSet):
     queryset = Blog.objects.all().order_by("-created_at")
@@ -31,3 +33,7 @@ class CauseViewSet(viewsets.ModelViewSet):
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
+
+class VolunteerViewSet(viewsets.ModelViewSet):
+    queryset = Volunteer.objects.all()
+    serializer_class = VolunteerSerializer

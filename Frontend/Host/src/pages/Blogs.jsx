@@ -1,95 +1,34 @@
-import React from 'react'
-import TitleBanner from '../components/blog/TitleBanner'
-import BlogRight from '../components/blog/BlogRightColumn';
-import BlogPosts from '../components/blog/BlogPosts';
+import React, { useState, useEffect } from "react";
+import TitleBanner from "../components/blog/TitleBanner";
+import BlogRight from "../components/blog/BlogRightColumn";
+import BlogPosts from "../components/blog/BlogPosts";
+import BlogsBg from "../assets/blogs-title-bg.jpeg";
 
-const backgroundImage = "https://images.pexels.com/photos/9968379/pexels-photo-9968379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+function Blogs() {
+  const [blogs, setBlogs] = useState([]);
 
-const blogPosts = [
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-08_medium.jpg',
-    category: 'Hope',
-    postTitle: 'First Full-Width Post',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-09_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Second Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-07_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Third Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    postImage: 'https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-06_medium.jpg',
-    category: 'Hope',
-    postTitle: 'Fourth Post Title',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  
-];
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/blogs/")
+      .then((response) => response.json())
+      .then((data) => setBlogs(data))
+      .catch((error) => console.log("error fetching blogs ", error));
+  }, []);
 
-function blogs() {
-  return ( 
-    <div className='bg-[#f3f5f7]'>
+  return (
+    <div className="bg-[#f3f5f7]">
+      <TitleBanner title={"Blog"} backgroundImage={BlogsBg} />
 
-      <TitleBanner 
-      title={'Blog'}
-      backgroundImage={backgroundImage}/>
-
-      <div className='w-full grid grid-cols-3 gap-[2vw] py-[7%] px-[5%]'>
-        <div className='col-span-2'>
-          <BlogPosts posts = {blogPosts} />
-
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-[7%] px-[5%]">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2">
+          <BlogPosts posts={blogs} />
         </div>
 
-        <div className='col-span-1'>
+        <div className="col-span-1">
           <BlogRight />
         </div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default blogs
+export default Blogs;
