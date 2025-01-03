@@ -10,6 +10,7 @@ export default {
         primary: "#00bbff",
         secondary: "#949494",
         background: "#F4F5F7",
+        customBlue: '#00bbff',
       },
     },
   },

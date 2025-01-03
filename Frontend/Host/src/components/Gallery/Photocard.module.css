@@ -1,0 +1,48 @@
+.photo_container {
+    position: relative; 
+    display: inline-block;
+    overflow: hidden; 
+    border-radius: 4px;
+}
+
+.Curr_photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.blue_shadow {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 0; 
+    height: 0;
+    background-color: #00bbff;
+    opacity: 0; 
+    transition: top 0.4s ease, left 0.4s ease, width 0.4s ease, height 0.4s ease, opacity 0.4s ease; /* Smooth animation for all properties */
+    z-index: 1; 
+    transform-origin: center;
+}
+
+.expand_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    display: none; 
+    z-index: 2; 
+}
+
+.photo_container:hover .blue_shadow {
+    opacity: 0.6; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+}
+
+.photo_container:hover .expand_icon {
+    display: block; 
+}

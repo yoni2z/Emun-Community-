@@ -1,6 +1,7 @@
 import React from 'react';
 import Blogs from './pages/Blogs';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Gallery from './Pages/GalleryPage/Gallery';
+import About from './Pages/AboutPage/About';
 import VolunteerPage from "./pages/VolunteerPage";
 import FAQ from "./pages/FAQ";
 import Causes from "./pages/Causes";
@@ -17,6 +18,8 @@ function App() {
           <Route path="causes" element={<Causes />} />
           <Route path="causes/:id" element={<CausesDetail />} />
           <Route path="/blogs" component={<Blogs />} />
+          <Route path="/about-us" component={<About />} />
+          <Route path="/gallery" component={<Gallery />} />
         </Routes>
       </Router>
     </>
