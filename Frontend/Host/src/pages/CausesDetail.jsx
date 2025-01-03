@@ -1,89 +1,30 @@
+import { useState, useEffect } from "react";
 import TitleBanner from "../components/TitleBanner";
 import CausesCard from "../components/Causes/CausesCard";
 import { useParams, useNavigate } from "react-router-dom";
+import CauseTitleBg from "../assets/cause-title-bg.jpg";
 
 const Causes = () => {
+  const [causes, setCauses] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
+  const [causeData, setCauseData] = useState(null);
 
-  const causeDetails = {
-    1: {
-      title: "Many different ways today to find",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-01_medium.jpg",
-      description:
-        "Detailed description for cause 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-    2: {
-      title: "Fundraiser for Bella and her friends",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-04_medium.jpg",
-      description:
-        "Detailed description for cause 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-    3: {
-      title: "New clothes for highland children",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-07_medium.jpg",
-      description:
-        "Detailed description for cause 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-    4: {
-      title: "Keep Teachers in the Classroom",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-02_medium.jpg",
-      description:
-        "Detailed description for cause 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-    5: {
-      title: "Supporting Lifeline charity group",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-05_medium.jpg",
-      description:
-        "Detailed description for cause 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-    6: {
-      title: "Big charity: build school for poor",
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-08_medium.jpg",
-      description:
-        "Detailed description for cause 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-      additionalInfo: {
-        author: "By Kawshar Ahmed",
-        date: "15 September 2017",
-        hits: "3085",
-      },
-    },
-  };
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/causes/")
+      .then((response) => response.json())
+      .then((data) => setCauses(data))
+      .catch((error) => console.log("error fetching causes ", error));
+  }, []);
 
-  const cause = causeDetails[id];
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8000/api/causes/${id}`)
+      .then((response) => response.json())
+      .then((data) => setCauseData(data))
+      .catch((error) => console.log("error fetching the cause datas ", error));
+  }, [id]);
 
-  if (!cause) {
+  if (!causeData) {
     return <div>Cause not found</div>;
   }
 
@@ -96,7 +37,7 @@ const Causes = () => {
 
   const handleNext = () => {
     const nextId = parseInt(id) + 1;
-    if (nextId <= Object.keys(causeDetails).length) {
+    if (nextId <= Object.keys(causes).length) {
       navigate(`/causes/${nextId}`);
     }
   };
@@ -105,16 +46,17 @@ const Causes = () => {
     <div className="font-poppins bg-[#F3F5F7]">
       <TitleBanner
         title="Causes"
-        backgroundImage="https://demo.joomshaper.com/2017/hope/images/demo/page-title-bg.jpg"
+        backgroundImage={CauseTitleBg}
       />
       <div className="py-[95px] sm:mx-10 mx-3 flex flex-col items-center">
         <CausesCard
-          causesImage={cause.image}
-          Title={cause.title}
-          Description={cause.description}
+          causesImage={causeData.image}
+          Title={causeData.title}
+          Description={causeData.description}
           detailView={true}
           extraFields={{
-            additionalInfo: cause.additionalInfo,
+            author: causeData.creator,
+            date: causeData.date,
             buttons: [
               {
                 label: "Prev",
