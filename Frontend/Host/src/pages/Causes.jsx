@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, resolvePath } from "react-router-dom";
 import TitleBanner from "../components/TitleBanner";
 import CausesCard from "../components/Causes/CausesCard";
-
+import CauseTitleBg from "../assets/cause-title-bg.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowRight,
@@ -10,64 +10,21 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Causes = () => {
+  const [causes, setCauses] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
 
-  const causesData = [
-    {
-      id: 1,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-01_medium.jpg",
-      title: "Many different ways today to find",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-    {
-      id: 2,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-04_medium.jpg",
-      title: "Fundraiser for Bella and her friends",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-    {
-      id: 3,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-07_medium.jpg",
-      title: "New clothes for highland children",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-    {
-      id: 4,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-02_medium.jpg",
-      title: "Keep Teachers in the Classroom",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-    {
-      id: 5,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-05_medium.jpg",
-      title: "Supporting Lifeline charity group",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-    {
-      id: 6,
-      image:
-        "https://demo.joomshaper.com/2017/hope/images/2017/09/19/blog-08_medium.jpg",
-      title: "Big charity: build school for poor",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore.",
-    },
-  ];
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/causes/")
+      .then((response) => response.json())
+      .then((data) => setCauses(data))
+      .catch((error) => console.log("error fetching causes ", error));
+  }, [])
 
-  const totalPages = Math.ceil(causesData.length / itemsPerPage);
+  const totalPages = Math.ceil(causes.length / itemsPerPage);
 
   // Get the items for the current page
-  const currentItems = causesData.slice(
+  const currentItems = causes.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -84,7 +41,7 @@ const Causes = () => {
     <div className="font-poppins bg-[#F3F5F7]">
       <TitleBanner
         title="Causes"
-        backgroundImage="https://demo.joomshaper.com/2017/hope/images/demo/page-title-bg.jpg"
+        backgroundImage={CauseTitleBg}
       />
       <div className="py-[95px] sm:mx-10 mx-3">
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8 mx-auto">

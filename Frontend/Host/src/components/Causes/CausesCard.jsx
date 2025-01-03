@@ -31,18 +31,18 @@ const CausesCard = ({
         </h1>
         {detailView && (
           <div className="mb-5">
-            {extraFields.additionalInfo && (
+            {extraFields && (
               <div className="flex flex-row flex-wrap">
                 <p className="text-secondary pr-3">
-                  {extraFields.additionalInfo.author}
+                  {extraFields.author}
                 </p>
                 <p className="text-secondary pr-3">
                   <FontAwesomeIcon icon={faClock} className="mr-2" />
-                  {extraFields.additionalInfo.date}
+                  {extraFields.date}
                 </p>
                 <p className="text-secondary pr-3">
                   <FontAwesomeIcon icon={faEye} className="mr-2" />
-                  Hits: {extraFields.additionalInfo.hits}
+                  Hits: 3080
                 </p>
                 <p className="text-secondary pr-3 flex items-center gap-2">
                   Share: <FaFacebookF className="w-4 h-4 hover:text-primary" />

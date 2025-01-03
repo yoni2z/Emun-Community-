@@ -25,7 +25,7 @@ class BlogViewSet(viewsets.ModelViewSet):
     serializer_class = BlogSerializer
 
 class CauseViewSet(viewsets.ModelViewSet):
-    queryset = Cause.objects.all().order_by('-created_at')
+    queryset = Cause.objects.all()
     serializer_class = CauseSerializer
 
 class ClientViewSet(viewsets.ModelViewSet):
