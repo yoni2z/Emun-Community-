@@ -3,6 +3,7 @@ import style from "./Gallery.module.css";
 import PhotoCard from "../../Components/Gallery/PhotoCard";
 import LightboxModal from "../../Components/Gallery/LightboxModal";
 import TitleBanner from "../../components/blogs/TitleBanner";
+import VolenteerCard from "../../Components/volenteer-with-us/VolenteerCard";
 
 const Gallery = () => {
 
@@ -62,6 +63,7 @@ const Gallery = () => {
     },[nextPhoto])
 
     return (
+      <>
         <div className={style.Gallery_container}>
             <div className={style.Gallery_topContainer}>
                 <TitleBanner title={"Gallery"} backgroundImage={"https://demo.joomshaper.com/2017/hope/images/demo/page-title-bg.jpg"} />
@@ -85,6 +87,8 @@ const Gallery = () => {
                 View More
             </button>
         </div>
+        <VolenteerCard />
+        </>
     );
 };
 
