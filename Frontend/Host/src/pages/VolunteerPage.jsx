@@ -1,14 +1,24 @@
+import React, { useEffect, useState } from "react";
 import VolunteerCard from "../components/Volunteer/VolunteerCard";
 import VolunteerForm from "../components/Volunteer/VolunteerForm";
 import TitleBanner from "../components/TitleBanner";
+import VolunteerBg from "../assets/volunteer-title-bg.jpg";
 
 const VolunteerPage = () => {
+  const [volunteers, setVolunteers] = useState([]);
+
+  // Fetch volunteers from the API
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/volunteers/")
+      .then((response) => response.json())
+      .then((data) => setVolunteers(data))
+      .catch((error) => console.error("Error fetching volunteers:", error));
+  }, []);
+
   return (
     <div className="font-poppins">
-      <TitleBanner
-        title="Volunteer"
-        backgroundImage="https://demo.joomshaper.com/2017/hope/images/demo/page-title-bg.jpg"
-      />
+      <TitleBanner title="Volunteer" backgroundImage={VolunteerBg} />
+
       <div className="py-[95px] mx-10">
         <div className="mb-[77px] text-center">
           <h1 className="text-4xl font-bold font-poppins mb-5">
@@ -16,20 +26,27 @@ const VolunteerPage = () => {
           </h1>
           <p className="text-secondary max-w-[80%] mx-auto">
             Join our team and get involved! Use your creativity and passion to
-            take an active role by fundraising, donating or volunteer.
+            take an active role by fundraising, donating or volunteering.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-4 gap-y-8 mx-auto">
-          <VolunteerCard />
-          <VolunteerCard />
-          <VolunteerCard />
-          <VolunteerCard />
-          <VolunteerCard />
-          <VolunteerCard />
+
+        {/* Render Volunteer Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 mx-auto">
+          {volunteers.map((volunteer) => (
+            <VolunteerCard
+              key={volunteer.id}
+              volunteerImage={volunteer.profile_image}
+              Name={volunteer.name}
+              Role={volunteer.role}
+              facebookUrl={volunteer.facebook_url}
+              twitterUrl={volunteer.twitter_url}
+              instagramUrl={volunteer.instagram_url}
+            />
+          ))}
         </div>
       </div>
 
-      {/*Become a Volunteer Section*/}
+      {/* Become a Volunteer Section */}
       <div>
         <div className="py-[95px] bg-background">
           <div className="mx-10">

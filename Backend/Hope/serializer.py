@@ -1,19 +1,20 @@
 from rest_framework import serializers
 from .models import (
-    PhotoGallery,
+    Gallery,
     Blog, Cause,
     Client,
+    Volunteer
 )
 
-class PhotoGallerySerializer(serializers.ModelSerializer):
+class GallerySerializer(serializers.ModelSerializer):
     class Meta:
-        model = PhotoGallery
-        fields = ['id', 'photo']
+        model = Gallery
+        fields = ['id', 'description', 'image']
 
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        fields = ['id', 'title', 'description', 'image', 'date', 'creator', 'created_at']
+        fields = ['id', 'title', 'description', 'image', 'date', 'category', 'creator', 'created_at']
 
 class CauseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,3 +25,8 @@ class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
         fields = ['id', 'name', 'logo']
+
+class VolunteerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Volunteer
+        fields = ['id', 'name', 'role', 'profile_image', 'email', 'phone_number', 'facebook_url', 'twitter_url', 'instagram_url']
