@@ -10,7 +10,7 @@ function PostCardMinimal({image, description}) {
         />
 
         <a href="#" className="">
-            <span className='text-black hover:text-primary transition-colors ease-in-out'>
+            <span className='hover:text-primary transition-colors ease-in-out'>
                 {description}
             </span>
         </a>

@@ -151,7 +151,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={closeMenu}>
+            <Link to="/contacts" onClick={closeMenu}>
               CONTACT
             </Link>
           </li>
