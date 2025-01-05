@@ -3,7 +3,8 @@ from .models import (
     Gallery,
     Blog, Cause,
     Client,
-    Volunteer
+    Volunteer,
+    BankAccount
 )
 
 class GallerySerializer(serializers.ModelSerializer):
@@ -30,3 +31,8 @@ class VolunteerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Volunteer
         fields = ['id', 'name', 'role', 'profile_image', 'email', 'phone_number', 'facebook_url', 'twitter_url', 'instagram_url']
+
+class BankAccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BankAccount
+        fields = ['id', 'bank_name', 'account_number', 'created_at']

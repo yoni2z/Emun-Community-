@@ -8,7 +8,8 @@ from .views import (
     BlogViewSet,
     CauseViewSet,
     ClientViewSet,
-    VolunteerViewSet
+    VolunteerViewSet,
+    BankAccountViewSet
 )
 
 router = DefaultRouter()
@@ -17,6 +18,7 @@ router.register(r'blogs', BlogViewSet, basename="blogs")
 router.register(r'causes', CauseViewSet, basename="causes")
 router.register(r'clients', ClientViewSet, basename="sponsors")
 router.register(r'volunteers', VolunteerViewSet, basename="volunteers")
+router.register(r'bank-accounts', BankAccountViewSet, basename="bank-accounts")
 
 urlpatterns = [
     path('api/', include(router.urls))

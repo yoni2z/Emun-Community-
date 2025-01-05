@@ -6,6 +6,7 @@ from .models import (
     Blog, Cause,
     Client,
     Volunteer,
+    BankAccount
 )
 
 from .serializer import (
@@ -14,6 +15,7 @@ from .serializer import (
     CauseSerializer,
     ClientSerializer,
     VolunteerSerializer,
+    BankAccountSerializer
 )
 
 # Create your views here.
@@ -37,3 +39,7 @@ class ClientViewSet(viewsets.ModelViewSet):
 class VolunteerViewSet(viewsets.ModelViewSet):
     queryset = Volunteer.objects.all()
     serializer_class = VolunteerSerializer
+
+class BankAccountViewSet(viewsets.ModelViewSet):
+    queryset = BankAccount.objects.all()
+    serializer_class = BankAccountSerializer
