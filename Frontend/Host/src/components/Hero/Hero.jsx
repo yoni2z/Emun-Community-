@@ -3,6 +3,7 @@ import "./styles.css";
 import image1 from "../../assets/Hero/1.jpg";
 import image2 from "../../assets/Hero/2.jpg";
 import image3 from "../../assets/Hero/3.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -48,12 +49,12 @@ const Hero = () => {
           GIVE A HELPING HAND TO THOSE WHO NEED IT!
         </p>
         <div className="hero-button">
-          <a href="#" className="fade-in-button">
+          <Link to="/about-us" className="fade-in-button">
             Get Started
-          </a>
-          <a href="#" className="fade-in-button yellow-button">
+          </Link>
+          <Link to="/donate" className="fade-in-button yellow-button">
             Donate Now
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -88,6 +88,7 @@ a {
   color: black;
   background-color: #00bbff;
   transition: color 0.3s ease;
+  margin-right: 5rem;
 }
 
 .donate-btn:hover {
@@ -278,6 +279,7 @@ a {
 
   .donate-btn {
     margin: 0;
+    margin-right: 5rem
   }
 
   .menu-icon {
@@ -368,6 +370,7 @@ a {
 
   .donate-btn {
     margin-left: 15px;
+    margin-right: 5rem
   }
 
   .menu-icon {
@@ -424,7 +427,7 @@ a {
     padding: 8px 20px; /* Slightly smaller padding for tablets */
     font-size: 14px;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 3rem;
   }
 
   .menu-icon {

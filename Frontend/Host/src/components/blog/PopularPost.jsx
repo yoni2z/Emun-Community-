@@ -7,11 +7,11 @@ function PopularPost({ posts }) {
       <h1 className="text-xl font-semibold text-gray-800 mb-5 pl-[3vw]">Popular Posts</h1>
 
       <div className="space-y-[20px]">
-        {posts.slice(0, 3).map((post, index) => (
+        {posts.slice(0, 6).map((post, index) => (
           <PostCardMinimal 
             key={index} 
             image={post.image} 
-            description={post.title} 
+            description={post.description} 
           />
         ))}
       </div>
