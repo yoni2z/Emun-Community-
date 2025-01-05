@@ -1,0 +1,57 @@
+.video {
+  padding: 275px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: wheat;
+  background: url("../../assets/Video/1.jpg");
+  background-size:auto;
+}
+
+.span {
+  margin: 10px 0 0 0;
+  display: flex;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  background-color: #00bbff; /* Yellow background */
+  border-radius: 50%;
+  border: 10px solid lightgray; /* Light gray ring */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.span:hover {
+  transform: scale(1.1); /* Scale up slightly */
+  border: 10px solid white;
+}
+
+.video > a {
+  text-align: center;
+}
+
+.span a svg {
+  color: black; /* Change icon color to white on hover */
+  transition: color 0.3s ease-in-out; /* Smooth icon color change */
+}
+.span:hover a svg {
+  color: white; /* Change icon color to white on hover */
+}
+/* Phones */
+@media only screen and (max-width: 479px) {
+     .video{
+        width: 100vw;
+        overflow: hidden;
+     }
+}
+/* Tablets */
+@media only screen and 
+(max-width: 767px) {
+     
+}
+/* Large Screen */
+@media only screen and (min-width: 768px) {
+     
+}

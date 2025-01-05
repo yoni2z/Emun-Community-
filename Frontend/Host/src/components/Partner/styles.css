@@ -1,0 +1,104 @@
+.partners {
+  padding: 55px 0;
+  width: 100%;
+  /* Ensure it spans full width */
+  background-color: #f9f9f9;
+  /* Optional: Add background color for contrast */
+}
+
+.partners-image {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Allows wrapping of items for smaller screens */
+  gap: 20px;
+  /* Adds spacing between items */
+}
+
+.partners-image>a {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  /* Centers images inside the link */
+  align-items: center;
+  max-width: 150px;
+  /* Restrict image size for consistency */
+}
+
+.partners-image>a img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Ensures images scale correctly */
+  transition: transform 0.3s ease;
+  /* Add hover effect */
+}
+
+.partners-image>a:hover img {
+  transform: scale(1.1);
+  /* Slight zoom on hover */
+}
+
+/* Phones */
+@media only screen and (max-width: 479px) {
+  .partners {
+    padding: 30px 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .partners-image {
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    gap: 20px;
+    /* Add spacing between items */
+  }
+
+  .partners-image>a {
+    width: 80%;
+    /* Adjust width for smaller screens */
+    margin: 0 auto;
+    /* Center align the links */
+  }
+
+  .partners-image>a img {
+    max-width: 100%;
+    /* Ensure images scale down properly */
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 767px) {
+  .partners {
+    padding: 40px 20px;
+    /* Adjust padding for tablets */
+  }
+
+  .partners-image {
+    justify-content: center;
+    /* Center align items */
+    gap: 30px;
+    /* Increase spacing for clarity */
+  }
+
+  .partners-image>a {
+    width: 45%;
+    /* Two items per row */
+    margin-bottom: 20px;
+    /* Add spacing between rows */
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 768px) {
+  .partners-image {
+    gap: 40px;
+    /* Add spacing between items */
+  }
+
+  .partners-image>a {
+    max-width: 150px;
+    /* Restrict image size */
+  }
+}
