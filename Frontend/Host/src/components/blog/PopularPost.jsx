@@ -11,7 +11,7 @@ function PopularPost({ posts }) {
           <PostCardMinimal 
             key={index} 
             image={post.image} 
-            description={post.description} 
+            description={post.title} 
           />
         ))}
       </div>

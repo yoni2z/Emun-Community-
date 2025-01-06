@@ -201,7 +201,7 @@ a {
 }
 
 .dropdown-item:hover {
-  background-color: #ffd012 !important;
+  background-color: #00bbff !important;
   /* Background color on hover */
   color: black !important;
   /* Text color on hover */
