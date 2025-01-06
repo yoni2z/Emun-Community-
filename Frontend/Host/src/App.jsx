@@ -3,6 +3,7 @@ import FAQ from "./pages/FAQ";
 import Causes from "./pages/Causes";
 import CausesDetail from "./pages/CausesDetail";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="faq" element={<FAQ />} />
           <Route path="causes" element={<Causes />} />
           <Route path="causes/:id" element={<CausesDetail />} />
+          <Route path="landing" element={<LandingPage />} />
         </Routes>
       </Router>
     </>
