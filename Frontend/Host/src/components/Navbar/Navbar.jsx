@@ -19,20 +19,23 @@ export const Navbar = () => {
   };
   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY <= 0) {
+      // Prevent further scrolling downward
+      window.scrollTo(0, 0);
+    } else if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
