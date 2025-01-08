@@ -8,6 +8,7 @@ import {
   faGooglePlus,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -25,7 +26,14 @@ export const Footer = () => {
       </div>
       <div className="aboutus">
         <h3>ABOUT US</h3>
-        <a href="">Who We Are</a>
+        <Link
+          to="/about-us"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          Who We Are
+        </Link>
         <a href="">How We Work</a>
         <a href="">Financial</a>
       </div>
