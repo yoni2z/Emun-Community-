@@ -44,7 +44,9 @@ const Hero = () => {
       }}
     >
       <div className="hero-content">
-        <h1 className="hero-title fade-in-text">Hope For <br /> Humanity</h1>
+        <h1 className="hero-title fade-in-text">
+          Hope For <br /> Humanity
+        </h1>
         <p className="hero-subtitle fade-in-text">
           GIVE A HELPING HAND TO THOSE WHO NEED IT!
         </p>
@@ -52,7 +54,13 @@ const Hero = () => {
           <Link to="/about-us" className="fade-in-button">
             Get Started
           </Link>
-          <Link to="/donate" className="fade-in-button yellow-button">
+          <Link
+            to="/donate"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="fade-in-button yellow-button"
+          >
             Donate Now
           </Link>
         </div>

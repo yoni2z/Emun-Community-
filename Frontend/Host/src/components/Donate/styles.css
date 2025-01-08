@@ -1,5 +1,6 @@
+/* General Styles */
 .donate {
-    padding: 120px 0px 100px;
+    padding: 100px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,11 +48,12 @@ span {
     margin: 0 0 50px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .donations>a {
     padding: 10px 20px;
-    margin: 0px 20px 0 0;
+    margin: 10px;
     border: 1px solid gray;
     border-radius: 4px;
     background-color: whitesmoke;
@@ -72,51 +74,67 @@ span {
     font-weight: bold;
     width: fit-content;
     border-radius: 4px;
+    text-align: center;
 }
 
 .donate-text>a:hover {
     background-color: #00bbff;
 }
 
+/* Extra Small Devices (below 320px) */
+@media only screen and (max-width: 319px) {
+    .donate {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .donate-image>img {
+        width: 100%;
+    }
+
+    .donate-text>h2 {
+        font-size: 32px;
+    }
+
+    .donate-text>p {
+        font-size: 12px;
+    }
+}
+
 /* Phones */
 @media only screen and (max-width: 479px) {
     .donate {
         flex-direction: column;
-        width: 100vw;
+        padding: 20px;
     }
 
     .donate-image {
-        padding: 0 15px;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
     }
 
     .donate-image>img {
-        object-fit: contain;
-        width: 70%;
-        height: auto;
-    }
-
-    .donate-text>a {
-        width: 45%;
+        width: 80%;
     }
 
     .donate-text {
-        padding: 0 20px;
-        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .donate-text>a {
+        width: 100%;
+        margin-top: 20px;
     }
 
     .donations {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        margin: 10px 0;
     }
 
     .donations>a {
         width: 100%;
-        margin: 10px 0;
     }
 }
 
@@ -129,9 +147,7 @@ span {
 
     .donate-image {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
     }
 
     .donate-image>img {
@@ -139,7 +155,7 @@ span {
     }
 
     .donate-text {
-        padding-left: 0;
+        padding: 20px;
         text-align: center;
     }
 
@@ -154,21 +170,24 @@ span {
     .donations {
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
-    }
-
-    .donations>a {
-        padding: 12px 20px;
-        margin: 10px;
-    }
-
-    .donate-text>a {
-        width: auto;
-        margin-top: 20px;
     }
 }
 
-/* Larger Screens */
-@media only screen and (min-width: 768px) {
-    /* Default styles are applied for larger screens */
+/* Larger Screens (above 1200px) */
+@media only screen and (min-width: 1200px) {
+    .donate {
+        padding: 140px 50px;
+    }
+
+    .donate-image {
+        width: 600px;
+    }
+
+    .donate-text>h2 {
+        font-size: 72px;
+    }
+
+    .donate-text>p {
+        font-size: 16px;
+    }
 }
