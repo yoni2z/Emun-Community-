@@ -43,7 +43,7 @@
   width: 100%;
 }
 
-.hero-button>a {
+.hero-button > a {
   font-size: 1rem;
   font-weight: bold;
   padding: 12px 20px;
@@ -54,15 +54,15 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.hero-button>a:hover {
+.hero-button > a:hover {
   background-color: #00bbff;
 }
 
-.hero-button>a:nth-child(2) {
+.hero-button > a:nth-child(2) {
   background-color: #00bbff;
 }
 
-.hero-button>a:nth-child(2):hover {
+.hero-button > a:nth-child(2):hover {
   background-color: black;
   color: white;
 }
@@ -89,7 +89,7 @@
     justify-content: flex-start;
   }
 
-  .hero-button>a {
+  .hero-button > a {
     width: auto;
   }
 }
@@ -114,7 +114,7 @@
     font-size: 1.5rem;
   }
 
-  .hero-button>a {
+  .hero-button > a {
     padding: 15px 25px;
   }
 }
@@ -128,6 +128,7 @@
 
   .hero-content {
     margin: 100px 150px;
+    margin-bottom: 0px;
   }
 
   .hero-title {
@@ -138,7 +139,7 @@
     font-size: 1.75rem;
   }
 
-  .hero-button>a {
+  .hero-button > a {
     padding: 19px 38px;
   }
 }
