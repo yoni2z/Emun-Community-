@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import BlogCard from './BlogCard';
+import React, { useState, useEffect } from "react";
+import BlogCard from "./BlogCard";
 
 function BlogPosts({ posts }) {
   const POSTS_PER_PAGE = 3; // Number of posts per page
@@ -7,7 +7,7 @@ function BlogPosts({ posts }) {
 
   // Scroll to the top of the page when currentPage changes
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [currentPage]);
 
   // Pagination logic
@@ -59,8 +59,8 @@ function BlogPosts({ posts }) {
           disabled={currentPage === 1}
           className={`px-4 py-2 border rounded ${
             currentPage === 1
-              ? 'text-gray-400 border-gray-300 cursor-not-allowed'
-              : 'text-primary border-primary hover:bg-primary hover:text-white'
+              ? "text-gray-400 border-gray-300 cursor-not-allowed"
+              : "text-button border-primary hover:bg-button hover:text-white"
           }`}
         >
           &larr; Prev
@@ -73,8 +73,8 @@ function BlogPosts({ posts }) {
               onClick={() => setCurrentPage(pageIndex + 1)}
               className={`px-4 py-2 rounded ${
                 currentPage === pageIndex + 1
-                  ? 'bg-primary text-white'
-                  : 'border border-primary text-primary hover:bg-primary hover:text-white'
+                  ? "bg-primary text-white"
+                  : "border border-primary text-primary hover:bg-primary hover:text-white"
               }`}
             >
               {pageIndex + 1}
@@ -87,8 +87,8 @@ function BlogPosts({ posts }) {
           disabled={currentPage === totalPages}
           className={`px-4 py-2 border rounded ${
             currentPage === totalPages
-              ? 'text-gray-400 border-gray-300 cursor-not-allowed'
-              : 'text-primary border-primary hover:bg-primary hover:text-white'
+              ? "text-gray-400 border-gray-300 cursor-not-allowed"
+              : "text-primary border-primary hover:bg-primary hover:text-white"
           }`}
         >
           Next &rarr;

@@ -21,7 +21,7 @@ const BlogsCard = ({
       />
       {/* Title and Description */}
       <div className="flex flex-col items-start text-left pt-6 pr-10 pb-6 pl-12">
-        <h1 className="text-primary text-base">Hope</h1>
+        <h1 className="text-primary text-base">Axion</h1>
         <h1
           className={`font-bold text-2xl  ${
             detailView ? "hover:text-black" : "hover:text-primary"
@@ -33,9 +33,7 @@ const BlogsCard = ({
           <div className="mb-5">
             {extraFields.additionalInfo && (
               <div className="flex flex-row flex-wrap">
-                <p className="text-secondary pr-3">
-                  {extraFields.author}
-                </p>
+                <p className="text-secondary pr-3">{extraFields.author}</p>
                 <p className="text-secondary pr-3">
                   <FontAwesomeIcon icon={faClock} className="mr-2" />
                   {extraFields.date}
@@ -58,7 +56,7 @@ const BlogsCard = ({
         {!detailView && (
           <a
             href="#"
-            className="text-primary hover:text-black text-left mt-5 mb-3"
+            className="text-button hover:text-black text-left mt-5 mb-3"
           >
             Continue Reading
           </a>

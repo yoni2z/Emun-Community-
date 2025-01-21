@@ -44,10 +44,7 @@ const Causes = () => {
 
   return (
     <div className="font-poppins bg-[#F3F5F7]">
-      <TitleBanner
-        title="Causes"
-        backgroundImage={CauseTitleBg}
-      />
+      <TitleBanner title="Causes" backgroundImage={CauseTitleBg} />
       <div className="py-[95px] sm:mx-10 mx-3 flex flex-col items-center">
         <CausesCard
           causesImage={causeData.image}
@@ -60,12 +57,12 @@ const Causes = () => {
             buttons: [
               {
                 label: "Prev",
-                style: "bg-primary text-white hover:bg-black",
+                style: "bg-button text-white hover:bg-black",
                 onClick: handlePrev,
               },
               {
                 label: "Next",
-                style: "bg-primary text-white hover:bg-black",
+                style: "bg-button text-white hover:bg-black",
                 onClick: handleNext,
               },
             ],
