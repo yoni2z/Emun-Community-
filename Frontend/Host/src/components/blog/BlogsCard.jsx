@@ -21,10 +21,10 @@ const BlogsCard = ({
       />
       {/* Title and Description */}
       <div className="flex flex-col items-start text-left pt-6 pr-10 pb-6 pl-12">
-        <h1 className="text-primary text-base">Hope</h1>
+        <h1 className="text-[#834098] text-base">Hope</h1>
         <h1
           className={`font-bold text-2xl  ${
-            detailView ? "hover:text-black" : "hover:text-primary"
+            detailView ? "hover:text-black" : "hover:text-[#834098]"
           } mb-6 mt-2`}
         >
           {Title}
@@ -33,9 +33,7 @@ const BlogsCard = ({
           <div className="mb-5">
             {extraFields.additionalInfo && (
               <div className="flex flex-row flex-wrap">
-                <p className="text-secondary pr-3">
-                  {extraFields.author}
-                </p>
+                <p className="text-secondary pr-3">{extraFields.author}</p>
                 <p className="text-secondary pr-3">
                   <FontAwesomeIcon icon={faClock} className="mr-2" />
                   {extraFields.date}
@@ -45,9 +43,10 @@ const BlogsCard = ({
                   Hits: 3080
                 </p>
                 <p className="text-secondary pr-3 flex items-center gap-2">
-                  Share: <FaFacebookF className="w-4 h-4 hover:text-primary" />
-                  <FaXTwitter className="w-4 h-4 hover:text-primary" />
-                  <FaInstagram className="w-4 h-4 hover:text-primary" />
+                  Share:{" "}
+                  <FaFacebookF className="w-4 h-4 hover:text-[#834098]" />
+                  <FaXTwitter className="w-4 h-4 hover:text-[#834098]" />
+                  <FaInstagram className="w-4 h-4 hover:text-[#834098]" />
                 </p>
               </div>
             )}
@@ -58,7 +57,7 @@ const BlogsCard = ({
         {!detailView && (
           <a
             href="#"
-            className="text-primary hover:text-black text-left mt-5 mb-3"
+            className="text-[#834098] hover:text-black text-left mt-5 mb-3"
           >
             Continue Reading
           </a>

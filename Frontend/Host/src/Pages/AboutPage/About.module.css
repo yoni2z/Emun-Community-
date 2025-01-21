@@ -43,7 +43,7 @@
     line-height: 1;
 }
 .abt_desc h1 span{
-    color:#00bbff;
+    color:#834098;
 }
 .abt_bottomdiv{
     display: flex ;
@@ -62,7 +62,7 @@
     left: 50%;
     width:120px;
     height:120px;
-    background-color: #00bbff;
+    background-color: #834098;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@
 }
 
 .readMoreButton:hover {
-    color: #00bbff;
+    color: #834098;
 }
 
 .readMoreButton .fas {

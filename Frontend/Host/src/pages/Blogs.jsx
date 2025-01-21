@@ -72,7 +72,7 @@ const Blogs = () => {
                 <button
                   onClick={handlePreviousPage}
                   disabled={currentPage === 1}
-                  className={`text-secondary hover:text-primary ${
+                  className={`text-secondary hover:text-[#834098] ${
                     currentPage === 1 && "opacity-50 cursor-not-allowed"
                   }`}
                 >
@@ -87,8 +87,8 @@ const Blogs = () => {
                       onClick={() => setCurrentPage(index + 1)}
                       className={`w-8 h-8 ${
                         currentPage === index + 1
-                          ? "bg-primary text-white rounded-full"
-                          : "text-black hover:text-white hover:bg-primary hover:rounded-full"
+                          ? "bg-[#834098] text-white rounded-full"
+                          : "text-black hover:text-white hover:bg-[#834098] hover:rounded-full"
                       }`}
                     >
                       {index + 1}
@@ -100,7 +100,7 @@ const Blogs = () => {
                 <button
                   onClick={handleNextPage}
                   disabled={currentPage === totalPages}
-                  className={`text-secondary hover:text-primary ${
+                  className={`text-secondary hover:text-[#834098] ${
                     currentPage === totalPages && "opacity-50 cursor-not-allowed"
                   }`}
                 >

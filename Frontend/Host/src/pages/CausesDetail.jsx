@@ -60,12 +60,12 @@ const Causes = () => {
             buttons: [
               {
                 label: "Prev",
-                style: "bg-primary text-white hover:bg-black",
+                style: "bg-[#834098] text-white hover:bg-black",
                 onClick: handlePrev,
               },
               {
                 label: "Next",
-                style: "bg-primary text-white hover:bg-black",
+                style: "bg-[#834098] text-white hover:bg-black",
                 onClick: handleNext,
               },
             ],

@@ -6,7 +6,7 @@ import BecomeVolunteerBg from "../../assets/become-a-volunteer-bg.png";
 const VolenteerCard = () => {
   return (
     <div
-      className="w-full h-[64vh]  flex items-center justify-center bg-cover bg-center relative bg-customBlue "
+      className="w-full h-[64vh]  flex items-center justify-center bg-cover bg-center relative bg-[#ffd012] "
       style={{
         backgroundImage: `url(${BecomeVolunteerBg})`,
         flexDirection: "column",
