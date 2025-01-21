@@ -21,7 +21,7 @@ const BlogsCard = ({
       />
       {/* Title and Description */}
       <div className="flex flex-col items-start text-left pt-6 pr-10 pb-6 pl-12">
-        <h1 className="text-[#834098] text-base">Hope</h1>
+        <h1 className="text-primary text-base">Axion</h1>
         <h1
           className={`font-bold text-2xl  ${
             detailView ? "hover:text-black" : "hover:text-[#834098]"
@@ -57,7 +57,7 @@ const BlogsCard = ({
         {!detailView && (
           <a
             href="#"
-            className="text-[#834098] hover:text-black text-left mt-5 mb-3"
+            className="text-button hover:text-black text-left mt-5 mb-3"
           >
             Continue Reading
           </a>

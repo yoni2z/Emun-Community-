@@ -13,7 +13,7 @@ const VolunteerForm = () => {
       </textarea>
       <button
         type="submit"
-        className="text-white bg-primary rounded-md w-fit mx-auto font-bold text-base py-5 px-9"
+        className="text-white bg-button rounded-md w-fit mx-auto font-bold text-base py-5 px-9"
       >
         Send Message
       </button>

@@ -19,7 +19,7 @@ const Causes = () => {
       .then((response) => response.json())
       .then((data) => setCauses(data))
       .catch((error) => console.log("error fetching causes ", error));
-  }, [])
+  }, []);
 
   const totalPages = Math.ceil(causes.length / itemsPerPage);
 
@@ -41,10 +41,7 @@ const Causes = () => {
 
   return (
     <div className="font-poppins bg-[#F3F5F7]">
-      <TitleBanner
-        title="Causes"
-        backgroundImage={CauseTitleBg}
-      />
+      <TitleBanner title="Causes" backgroundImage={CauseTitleBg} />
       <div className="py-[95px] sm:mx-10 mx-3">
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8 mx-auto">
           {currentItems.map((cause) => (
@@ -78,8 +75,8 @@ const Causes = () => {
                   onClick={() => setCurrentPage(index + 1)}
                   className={`w-8 h-8 ${
                     currentPage === index + 1
-                      ? "bg-[#830098] text-white rounded-full"
-                      : "text-black hover:text-white hover:bg-[#830098] hover:rounded-full"
+                      ? "bg-button text-white rounded-full"
+                      : "text-black hover:text-white hover:bg-button hover:rounded-full"
                   }`}
                 >
                   {index + 1}

@@ -59,12 +59,12 @@ const Blogs = () => {
               buttons: [
                 {
                   label: "Prev",
-                  style: "bg-[#834098] text-white hover:bg-black",
+                  style: "bg-button text-white hover:bg-black",
                   onClick: handlePrev,
                 },
                 {
                   label: "Next",
-                  style: "bg-[#834098] text-white hover:bg-black",
+                  style: "bg-button text-white hover:bg-black",
                   onClick: handleNext,
                 },
               ],
