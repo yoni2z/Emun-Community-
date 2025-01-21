@@ -33,6 +33,8 @@
 }
 
 .navbar-logo>a>img {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
@@ -60,7 +62,7 @@
 }
 
 .navbar-links>ul>li:hover {
-  color: #00bbff;
+  color: #ffd012;
   cursor: pointer;
 }
 
@@ -75,7 +77,7 @@ a {
 }
 
 .navbar-container a:hover {
-  color: #00bbff;
+  color: #ffd012;
 }
 
 .donate-btn {
@@ -86,7 +88,7 @@ a {
   text-align: justify;
   border-radius: 4px;
   color: black;
-  background-color: #00bbff;
+  background-color: #ffd012;
   transition: color 0.3s ease;
   margin-right: 5rem;
 }
@@ -102,7 +104,7 @@ a {
 }
 
 .arrowdown-icon:hover {
-  color: #00bbff;
+  color: #ffd012;
 }
 
 .menu-icon {
@@ -127,7 +129,7 @@ a {
 }
 
 .navbar-dropdown-toggle:hover {
-  color: #00bbff;
+  color: #ffd012;
 }
 
 /* Dropdown menu container */
@@ -166,7 +168,7 @@ a {
 
 /* Dropdown item hover effect */
 .dropdown-item:hover {
-  background-color: #00bbff;
+  background-color: #ffd012;
   /* Yellow background on hover */
   color: black;
   /* Black text on hover */
@@ -201,7 +203,7 @@ a {
 }
 
 .dropdown-item:hover {
-  background-color: #00bbff !important;
+  background-color: #ffd012 !important;
   /* Background color on hover */
   color: black !important;
   /* Text color on hover */

@@ -54,7 +54,7 @@ const Gallery = () => {
         <div className={style.Gallery_Text}>
           <h1>
             We hope to make this{" "}
-            <span style={{ color: "#00bbff" }}>World Happier</span>
+            <span style={{ color: "#834098" }}>World Happier</span>
           </h1>
           <p>
             International giving can be complex. We've donated $321,000 to 20

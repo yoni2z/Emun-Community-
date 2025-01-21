@@ -41,7 +41,7 @@
 }
 
 span {
-    color: #00bbff;
+    color: #834098;
 }
 
 .donations {
@@ -63,12 +63,12 @@ span {
 }
 
 .donations>a:hover {
-    background-color: #00bbff;
+    background-color: #834098;
 }
 
 .donate-text>a {
     font: 16px 'Poppins', sans-serif;
-    padding: 19px 35px;
+    padding: 12px 35px;
     background-color: black;
     color: white;
     font-weight: bold;
@@ -78,7 +78,7 @@ span {
 }
 
 .donate-text>a:hover {
-    background-color: #00bbff;
+    background-color: #834098;
 }
 
 /* Extra Small Devices (below 320px) */

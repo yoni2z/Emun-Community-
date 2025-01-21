@@ -24,7 +24,7 @@ const BlogsCard = ({
         <h1 className="text-primary text-base">Axion</h1>
         <h1
           className={`font-bold text-2xl  ${
-            detailView ? "hover:text-black" : "hover:text-primary"
+            detailView ? "hover:text-black" : "hover:text-[#834098]"
           } mb-6 mt-2`}
         >
           {Title}
@@ -43,9 +43,10 @@ const BlogsCard = ({
                   Hits: 3080
                 </p>
                 <p className="text-secondary pr-3 flex items-center gap-2">
-                  Share: <FaFacebookF className="w-4 h-4 hover:text-primary" />
-                  <FaXTwitter className="w-4 h-4 hover:text-primary" />
-                  <FaInstagram className="w-4 h-4 hover:text-primary" />
+                  Share:{" "}
+                  <FaFacebookF className="w-4 h-4 hover:text-[#834098]" />
+                  <FaXTwitter className="w-4 h-4 hover:text-[#834098]" />
+                  <FaInstagram className="w-4 h-4 hover:text-[#834098]" />
                 </p>
               </div>
             )}

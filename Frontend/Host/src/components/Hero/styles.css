@@ -1,17 +1,4 @@
-/* Base styles - Mobile First */
-.hero-container {
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  transition: background-image 1s ease-in-out;
-  padding: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .hero-content {
   display: flex;
@@ -21,6 +8,8 @@
   color: white;
   z-index: 1;
   margin: 20px;
+  justify-content: center;
+  height: 100%;
 }
 
 .hero-title {
@@ -28,22 +17,25 @@
   font-weight: bold;
   margin-bottom: 10px;
   line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-subtitle {
   font-size: 1rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 100%;
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
-.hero-button > a {
+.hero-button>a {
   font-size: 1rem;
   font-weight: bold;
   padding: 12px 20px;
@@ -54,15 +46,15 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.hero-button > a:hover {
-  background-color: #00bbff;
+.hero-button>a:hover {
+  background-color: #ffd012;
 }
 
-.hero-button > a:nth-child(2) {
-  background-color: #00bbff;
+.hero-button>a:nth-child(2) {
+  background-color: #ffd012;
 }
 
-.hero-button > a:nth-child(2):hover {
+.hero-button>a:nth-child(2):hover {
   background-color: black;
   color: white;
 }
@@ -70,8 +62,10 @@
 /* Tablets (min-width: 480px) */
 @media (min-width: 480px) {
   .hero-content {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    /* Keep title and subtitle centered */
+    text-align: center;
+    /* Keep centered text alignment */
     margin: 40px;
   }
 
@@ -87,9 +81,12 @@
     flex-direction: row;
     gap: 20px;
     justify-content: flex-start;
+    /* Buttons aligned slightly to the left */
+    align-self: center;
+    /* Center buttons horizontally within hero-content */
   }
 
-  .hero-button > a {
+  .hero-button>a {
     width: auto;
   }
 }
@@ -97,8 +94,9 @@
 /* Small desktops (min-width: 768px) */
 @media (min-width: 768px) {
   .hero-container {
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    /* Center hero-content vertically */
+    align-items: center;
     padding: 50px;
   }
 
@@ -114,7 +112,7 @@
     font-size: 1.5rem;
   }
 
-  .hero-button > a {
+  .hero-button>a {
     padding: 15px 25px;
   }
 }
@@ -124,22 +122,33 @@
   .hero-container {
     height: 100vh;
     padding: 100px;
+    justify-content: center;
+    align-items: start;
   }
 
   .hero-content {
-    margin: 100px 150px;
-    margin-bottom: 0px;
+    margin: 0;
   }
 
   .hero-title {
     font-size: 5rem;
+    /* font-weight: normal; */
+    
   }
 
   .hero-subtitle {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    /* font-weight: normal; */
   }
 
-  .hero-button > a {
-    padding: 19px 38px;
+  .hero-button {
+    margin-top: 30px;
+    justify-content: flex-start;
+    align-self: start;
+  }
+
+  .hero-button>a {
+    padding: 12px 38px;
+    font-weight: normal;
   }
 }

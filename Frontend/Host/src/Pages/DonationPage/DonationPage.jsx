@@ -31,20 +31,20 @@ const DonationPage = () => {
           <div className="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
             <h1 className="text-3xl font-bold font-poppins mb-5">
               Donate and Make a{" "}
-              <span className="text-[#00bbff]">Difference</span>
+              <span className="text-[#834098]">Difference</span>
             </h1>
             <p className="text-lg text-gray-600 mb-6 text-center max-w-md">
               Your contribution helps us drive impactful change. Below are our
               bank details for donations.
             </p>
             <h2 className="text-3xl font-bold font-poppins mb-5">
-              Bank Account <span className="text-[#00bbff]">Details</span>
+              Bank Account <span className="text-[#834098]">Details</span>
             </h2>
             <ul className="space-y-4">
               {bankAccounts.map((account, index) => (
                 <li
                   key={index}
-                  className="p-4 border border-gray-200 rounded-lg hover:shadow-md hover:border-[#00bbff] transition"
+                  className="p-4 border border-gray-200 rounded-lg hover:shadow-md hover:border-[#834098] transition"
                 >
                   <p className="text-lg font-medium text-gray-800">
                     {account.bank_name}
