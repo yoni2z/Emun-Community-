@@ -1,0 +1,145 @@
+/* Base styles - Mobile First */
+.hero-container {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+  padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  margin: 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.hero-button > a {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-button > a:hover {
+  background-color: #00bbff;
+}
+
+.hero-button > a:nth-child(2) {
+  background-color: #00bbff;
+}
+
+.hero-button > a:nth-child(2):hover {
+  background-color: black;
+  color: white;
+}
+
+/* Tablets (min-width: 480px) */
+@media (min-width: 480px) {
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+    margin: 40px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-button {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .hero-button > a {
+    width: auto;
+  }
+}
+
+/* Small desktops (min-width: 768px) */
+@media (min-width: 768px) {
+  .hero-container {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 50px;
+  }
+
+  .hero-content {
+    margin: 80px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-button > a {
+    padding: 15px 25px;
+  }
+}
+
+/* Large desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .hero-container {
+    height: 100vh;
+    padding: 100px;
+  }
+
+  .hero-content {
+    margin: 100px 150px;
+    margin-bottom: 0px;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .hero-button > a {
+    padding: 19px 38px;
+  }
+}

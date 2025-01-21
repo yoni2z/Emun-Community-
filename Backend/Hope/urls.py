@@ -4,17 +4,21 @@ from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 
 from .views import (
-    PhotoGalleryViewSet,
+    GalleryViewSet,
     BlogViewSet,
     CauseViewSet,
-    ClientViewSet
+    ClientViewSet,
+    VolunteerViewSet,
+    BankAccountViewSet
 )
 
 router = DefaultRouter()
-router.register(r'photo-gallery', PhotoGalleryViewSet, basename="photo-gallery")
+router.register(r'gallery', GalleryViewSet, basename="photo-gallery")
 router.register(r'blogs', BlogViewSet, basename="blogs")
 router.register(r'causes', CauseViewSet, basename="causes")
 router.register(r'clients', ClientViewSet, basename="sponsors")
+router.register(r'volunteers', VolunteerViewSet, basename="volunteers")
+router.register(r'bank-accounts', BankAccountViewSet, basename="bank-accounts")
 
 urlpatterns = [
     path('api/', include(router.urls))

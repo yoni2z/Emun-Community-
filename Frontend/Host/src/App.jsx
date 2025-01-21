@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import "./app.css";
+import { Home } from './pages/Home/Home';
+import Navbar from './components/Navbar/Navbar';
+import { Trademark } from './components/Trademark/Trademark';
+import { Footer } from './components/Footer/Footer';
+import Blogs from './pages/Blogs';
+import BlogsDetail from './pages/BlogsDetail';
+import Gallery from './pages/GalleryPage/Gallery';
+import About from './pages/AboutPage/About';
+import VolunteerPage from "./pages/VolunteerPage";
+import FAQ from "./pages/FAQ";
+import Causes from "./pages/Causes";
+import CausesDetail from "./pages/CausesDetail";
+import DonationPage from './pages/DonationPage/DonationPage';
+import Contacts from './pages/Contacts';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/volunteers" element={<VolunteerPage />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="causes" element={<Causes />} />
+          <Route path="causes/:id" element={<CausesDetail />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="blogs/:id" element={<BlogsDetail />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/donate" element={<DonationPage />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+        <Footer />
+        <Trademark />
+      </Router>
     </>
-  )
+  );
 }
 
 export default App;

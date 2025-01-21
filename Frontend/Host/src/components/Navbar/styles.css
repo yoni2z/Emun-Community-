@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+
+.navbar-container {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+/* When scrolled, change the background */
+.navbar-container.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-logo {
+  width: auto;
+  height: auto;
+  margin-left: 145px;
+  padding: 0 14px;
+}
+
+.navbar-logo>a {
+  font: 15px "Poppins" sans-serif;
+}
+
+.navbar-logo>a>img {
+  object-fit: contain;
+}
+
+.navbar-links {
+  margin-left: auto;
+  margin-right: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.navbar-links>ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links>ul>li {
+  font: 14px "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  transform: translateZ(0);
+  padding: 0px 12px;
+  text-align: center;
+}
+
+.navbar-links>ul>li:hover {
+  color: #00bbff;
+  cursor: pointer;
+}
+
+a {
+  padding: 0;
+  font: 14px "Poppins", sans-serif;
+  text-align: justify;
+  border: none;
+  /* color: white; */
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar-container a:hover {
+  color: #00bbff;
+}
+
+.donate-btn {
+  margin: 13px 0px 10px 0px;
+  padding: 8px 27px;
+  font: 14px "Poppins", serif;
+  font-weight: 400;
+  text-align: justify;
+  border-radius: 4px;
+  color: black;
+  background-color: #00bbff;
+  transition: color 0.3s ease;
+  margin-right: 5rem;
+}
+
+.donate-btn:hover {
+  color: black !important;
+  background-color: white;
+  cursor: pointer;
+}
+
+.arrowdown-icon {
+  color: white;
+}
+
+.arrowdown-icon:hover {
+  color: #00bbff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Dropdown container */
+.navbar-dropdown {
+  position: relative;
+}
+
+/* Dropdown link (What's New) */
+.navbar-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-dropdown-toggle:hover {
+  color: #00bbff;
+}
+
+/* Dropdown menu container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  /* Background color for the dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  list-style: none;
+  padding: 0px 0;
+  margin: 0;
+  display: none;
+  z-index: 1000;
+  width: 150px;
+}
+
+/* Show dropdown menu when the parent is hovered */
+.navbar-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #949494;
+  /* Default text color */
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #00bbff;
+  /* Yellow background on hover */
+  color: black;
+  /* Black text on hover */
+  cursor: pointer;
+}
+
+/* Ensure non-hovered dropdown items retain their default style */
+.dropdown-menu .dropdown-item:not(:hover) {
+  background-color: white;
+  /* Reset background for non-hovered items */
+  color: #949494;
+  /* Default text color */
+}
+
+/* Show dropdown menu when open */
+.navbar-dropdown:hover .dropdown-menu,
+.navbar-dropdown-active .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown items */
+/* Dropdown items hover effect */
+.dropdown-item {
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #949494;
+  /* Default text color */
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #00bbff !important;
+  /* Background color on hover */
+  color: black !important;
+  /* Text color on hover */
+  cursor: pointer;
+}
+
+/* Mobile-specific styling */
+@media only screen and (max-width: 767px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+
+  .navbar-dropdown-toggle {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .dropdown-item {
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    padding: 30px 0;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links>ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-logo>img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .donate-btn {
+    margin: 0;
+    margin-right: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2000;
+  }
+}
+
+@media print {
+  .navbar-container {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .dropdown-menu {
+    position: static;
+    width: 60vw;
+  }
+
+  .navbar-dropdown-toggle {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .dropdown-item {
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links>ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    display: flex;
+    height: 4rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+
+  .navbar-logo>img {
+    width: 170px;
+    height: auto;
+  }
+
+  .donate-btn {
+    margin-left: 15px;
+    margin-right: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2000;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-container {
+    height: auto;
+    padding: 20px 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin-left: 20px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .navbar-logo>img {
+    width: 150px; /* Adjust logo size for tablets */
+    height: auto;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+
+  .navbar-links>ul {
+    flex-direction: row;
+    gap: 1.2rem; /* Adjust gap between menu items */
+    align-items: center;
+  }
+
+  .navbar-links>ul>li {
+    font-size: 13px; /* Adjust font size for readability */
+    padding: 0 8px;
+  }
+
+  .donate-btn {
+    padding: 8px 20px; /* Slightly smaller padding for tablets */
+    font-size: 14px;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+
+  .menu-icon {
+    display: none; /* Hide menu icon for tablets unless using a collapsible menu */
+  }
+
+  .navbar-dropdown-toggle {
+    font-size: 13px; /* Adjust font size for dropdown toggle */
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px; /* Adjust dropdown width for tablets */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropdown-item {
+    font-size: 12px; /* Slightly smaller font for dropdown items */
+    padding: 10px 15px;
+  }
+
+  /* Adjust hover and dropdown behaviors */
+  .navbar-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Additional styles for tablet-specific designs */
+  .arrowdown-icon {
+    font-size: 1.2rem; /* Adjust arrow icon size */
+  }
+}
+
+@media only screen and (min-width: 768px) {}
