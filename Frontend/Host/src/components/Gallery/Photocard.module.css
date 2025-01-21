@@ -17,7 +17,7 @@
     left: 50%; 
     width: 0; 
     height: 0;
-    background-color: #00bbff;
+    background-color: #834098;
     opacity: 0; 
     transition: top 0.4s ease, left 0.4s ease, width 0.4s ease, height 0.4s ease, opacity 0.4s ease; /* Smooth animation for all properties */
     z-index: 1; 

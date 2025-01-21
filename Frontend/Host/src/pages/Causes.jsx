@@ -60,7 +60,7 @@ const Causes = () => {
             <button
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
-              className={`text-secondary hover:text-primary ${
+              className={`text-secondary hover:text-[#834098] ${
                 currentPage === 1 && "opacity-50 cursor-not-allowed"
               }`}
             >
@@ -88,7 +88,7 @@ const Causes = () => {
             <button
               onClick={handleNextPage}
               disabled={currentPage === totalPages}
-              className={`text-secondary hover:text-primary ${
+              className={`text-secondary hover:text-[#834098] ${
                 currentPage === totalPages && "opacity-50 cursor-not-allowed"
               }`}
             >

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import Logo from "../../assets/Navbar/logo.png";
+import Logo from "../../assets/Navbar/emun.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
@@ -82,7 +82,7 @@ useEffect(() => {
               GALLERY
             </Link>
           </li>
-          <li className="navbar-dropdown">
+          {/* <li className="navbar-dropdown">
             <div
               className="navbar-dropdown-toggle"
               onClick={toggleDropdown}
@@ -142,17 +142,17 @@ useEffect(() => {
                 </li>
               </ul>
             )}
-          </li>
+          </li> */}
           <li>
             <Link to="/blogs" onClick={closeMenu}>
               BLOGS
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/causes" onClick={closeMenu}>
               CAUSES
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/contacts" onClick={closeMenu}>
               CONTACT

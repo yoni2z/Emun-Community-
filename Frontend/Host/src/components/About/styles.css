@@ -22,7 +22,7 @@
   line-height: 1;
 }
 .span1 {
-  color: #00bbff;
+  color: #834098;
 }
 .about-us-text > p {
   font-family: Poppins, sans-serif;
@@ -43,7 +43,7 @@
   letter-spacing: -0.5px;
 }
 .about-us-text > a:hover {
-  background-color: #00bbff;
+  background-color: #834098;
 }
 .about-logos {
   display: flex;

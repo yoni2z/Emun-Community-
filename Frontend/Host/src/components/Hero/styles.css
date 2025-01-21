@@ -48,18 +48,18 @@
   font-weight: bold;
   padding: 12px 20px;
   color: black;
-  background-color: white;
+  background-color: #834098;
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
 }
 
 .hero-button > a:hover {
-  background-color: #00bbff;
+  background-color: #ffd012;
 }
 
 .hero-button > a:nth-child(2) {
-  background-color: #00bbff;
+  background-color: #ffd012;
 }
 
 .hero-button > a:nth-child(2):hover {

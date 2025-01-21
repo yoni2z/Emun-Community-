@@ -41,7 +41,7 @@
 }
 
 span {
-    color: #00bbff;
+    color: #834098;
 }
 
 .donations {
@@ -63,7 +63,7 @@ span {
 }
 
 .donations>a:hover {
-    background-color: #00bbff;
+    background-color: #834098;
 }
 
 .donate-text>a {
@@ -78,7 +78,7 @@ span {
 }
 
 .donate-text>a:hover {
-    background-color: #00bbff;
+    background-color: #834098;
 }
 
 /* Extra Small Devices (below 320px) */

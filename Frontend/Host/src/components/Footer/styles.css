@@ -44,6 +44,13 @@
 .follow-social > a {
   margin: 0 35px 0 0;
 }
+
+.footer-emun {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
 /* Phones */
 @media only screen and (max-width: 479px) {
   .footer {

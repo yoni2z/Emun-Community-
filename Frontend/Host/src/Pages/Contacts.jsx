@@ -13,7 +13,7 @@ const Contacts = () => {
             {/* Left Side: Contact Info */}
             <div className="p-8">
               <h1 className="text-3xl font-bold font-poppins mb-5">
-                Contact <span className="text-[#00bbff]">Info</span>
+                Contact <span className="text-[#834098]">Info</span>
               </h1>
               <p className="text-gray-500 mb-6">
                 Feel free to reach out to us through the following contact
@@ -22,7 +22,7 @@ const Contacts = () => {
               <div className="space-y-8">
                 {/* Email Section */}
                 <div className="flex items-start">
-                  <FaEnvelope className="text-[#00bbff] text-xl mt-1" />
+                  <FaEnvelope className="text-[#834098] text-xl mt-1" />
                   <div className="ml-4">
                     <span className="text-lg font-semibold text-gray-800">
                       Email
@@ -33,7 +33,7 @@ const Contacts = () => {
 
                 {/* Phone Section */}
                 <div className="flex items-start">
-                  <FaPhoneAlt className="text-[#00bbff] text-xl mt-1" />
+                  <FaPhoneAlt className="text-[#834098] text-xl mt-1" />
                   <div className="ml-4">
                     <span className="text-lg font-semibold text-gray-800">
                       Phone
@@ -44,7 +44,7 @@ const Contacts = () => {
 
                 {/* Address Section */}
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-[#00bbff] text-xl mt-1" />
+                  <FaMapMarkerAlt className="text-[#834098] text-xl mt-1" />
                   <div className="ml-4">
                     <span className="text-lg font-semibold text-gray-800">
                       Address
@@ -60,33 +60,33 @@ const Contacts = () => {
             {/* Right Side: Feedback Form */}
             <div className="p-8">
               <h1 className="text-3xl font-bold font-poppins mb-5">
-                Send Us Your <span className="text-[#00bbff]">Feedback</span>
+                Send Us Your <span className="text-[#834098]">Feedback</span>
               </h1>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00bbff]"
+                    className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#834098]"
                   />
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00bbff]"
+                    className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#834098]"
                   />
                 </div>
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00bbff]"
+                  className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#834098]"
                 />
                 <textarea
                   placeholder="Your Message"
-                  className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00bbff] h-32"
+                  className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#834098] h-32"
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-[#00bbff] text-white py-3 rounded-lg hover:bg-[#009ae6] transition duration-200"
+                  className="w-full bg-[#834098] text-white py-3 rounded-lg hover:bg-[#009ae6] transition duration-200"
                 >
                   Send Message
                 </button>
