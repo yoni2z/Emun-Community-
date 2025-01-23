@@ -52,29 +52,14 @@ useEffect(() => {
       {/* Navbar Links */}
       <div className={`navbar-links ${menuOpen ? "show" : ""}`}>
         <ul className="links-only">
-          <li className="navbar-dropdown">
-            <div
-              className="navbar-dropdown-toggle"
-              onClick={toggleDropdown}
-              role="button"
-              tabIndex={0}
-              onKeyPress={(e) => e.key === "Enter" && toggleDropdown()}
-            >
-              HOME <IoIosArrowDown />
-            </div>
-            {dropdownOpen && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/" className="dropdown-item" onClick={closeMenu}>
-                    HOMELESS
-                  </Link>
-                </li>
-              </ul>
-            )}
+          <li>
+            <Link to="/" onClick={closeMenu}>
+              HOME
+            </Link>
           </li>
           <li>
             <Link to="/about-us" onClick={closeMenu}>
-              ABOUT HOPE
+              ABOUT US
             </Link>
           </li>
           <li>
@@ -82,12 +67,12 @@ useEffect(() => {
               OUR WORK
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/gallery" onClick={closeMenu}>
               GALLERY
             </Link>
-          </li>
-          {/* <li className="navbar-dropdown">
+          </li> */}
+          <li className="navbar-dropdown">
             <div
               className="navbar-dropdown-toggle"
               onClick={toggleDropdown}
@@ -101,19 +86,19 @@ useEffect(() => {
               <ul className="dropdown-menu">
                 <li>
                   <Link
-                    to="/volunteers"
+                    to="/blogs"
                     className="dropdown-item"
                     onClick={closeMenu}
                   >
-                    VOLUNTEER
+                    BLOGS
                   </Link>
                 </li>
                 <li>
-                  <Link to="/faq" className="dropdown-item" onClick={closeMenu}>
-                    FAQ
+                  <Link to="/gallery" className="dropdown-item" onClick={closeMenu}>
+                    GALLERY
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/login"
                     className="dropdown-item"
@@ -121,8 +106,8 @@ useEffect(() => {
                   >
                     LOGIN FORM
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     to="/registration"
                     className="dropdown-item"
@@ -130,8 +115,8 @@ useEffect(() => {
                   >
                     REGISTRATION FORM
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     to="/soon"
                     className="dropdown-item"
@@ -139,20 +124,20 @@ useEffect(() => {
                   >
                     COMING SOON
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link to="/404" className="dropdown-item" onClick={closeMenu}>
                     404 PAGE
                   </Link>
-                </li>
+                </li> */}
               </ul>
             )}
-          </li> */}
-          <li>
+          </li>
+          {/* <li>
             <Link to="/blogs" onClick={closeMenu}>
               BLOGS
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to="/causes" onClick={closeMenu}>
               CAUSES

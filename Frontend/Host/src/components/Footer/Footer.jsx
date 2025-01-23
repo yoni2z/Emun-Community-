@@ -1,5 +1,5 @@
 import React from "react";
-import i1 from "../../assets/Footer/1.png";
+import i1 from "../../assets/Footer/emun.png";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="hope">
-        <img src={i1} alt="Hope" />
+        <img src={i1} className="footer-emun" alt="Hope" />
         <div className="hope-address">
           <p>
             212 Saint James Drive, <br />

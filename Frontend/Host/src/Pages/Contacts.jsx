@@ -1,6 +1,6 @@
 import React from "react";
 import TitleBanner from "../components/TitleBanner";
-import CauseTitleBg from "../assets/cause-title-bg.jpg";
+import CauseTitleBg from "../assets/all-bg.jpg";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contacts = () => {

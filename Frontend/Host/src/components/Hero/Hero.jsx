@@ -45,7 +45,7 @@ const Hero = () => {
     >
       <div className="hero-content">
         <h1 className="hero-title fade-in-text">
-          HOPE FOR HUMANITY
+          EMUN COMMUNITY
         </h1>
         <p className="hero-subtitle fade-in-text">
           Give a helping hand to those who need it!
