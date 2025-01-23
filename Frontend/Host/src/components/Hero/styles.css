@@ -46,19 +46,11 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
-.hero-button > a:hover {
-  background-color: #ffd012;
-}
-
-.hero-button > a:nth-child(2) {
-=======
 .hero-button>a:hover {
   background-color: #ffd012;
 }
 
 .hero-button>a:nth-child(2) {
->>>>>>> a10f9bf04d1e3ba771516493c71094e894575191
   background-color: #ffd012;
 }
 

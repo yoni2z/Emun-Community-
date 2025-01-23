@@ -18,11 +18,7 @@
     left: 50%; 
     width: 0; 
     height: 0;
-<<<<<<< HEAD
-    background-color: #834098;
-=======
     background-color: #ffd012;
->>>>>>> a10f9bf04d1e3ba771516493c71094e894575191
     opacity: 0; 
     transition: top 0.4s ease, left 0.4s ease, width 0.4s ease, height 0.4s ease, opacity 0.4s ease; /* Smooth animation for all properties */
     z-index: 1; 
