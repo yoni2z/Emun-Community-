@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import TitleBanner from "../components/blog/TitleBanner";
 import BlogsCard from "../components/blog/BlogsCard";
-import BlogsBg from "../assets/blogs-title-bg.jpeg";
+import BlogsBg from "../assets/all-bg.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

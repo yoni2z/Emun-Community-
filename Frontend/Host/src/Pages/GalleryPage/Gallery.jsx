@@ -4,7 +4,7 @@ import PhotoCard from "../../Components/Gallery/PhotoCard";
 import LightboxModal from "../../Components/Gallery/LightboxModal";
 import TitleBanner from "../../components/blog/TitleBanner";
 import VolenteerCard from "../../Components/volenteer-with-us/VolenteerCard";
-import GalleryBg from "../../assets/gallery-title-bg.jpg";
+import GalleryBg from "../../assets/all-bg.jpg";
 
 const Gallery = () => {
   const [photos, setPhotos] = useState([]);

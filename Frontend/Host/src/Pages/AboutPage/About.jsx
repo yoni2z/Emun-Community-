@@ -3,7 +3,7 @@ import style from './About.module.css';
 import {Link} from 'react-router-dom';
 import TitleBanner from '../../components/blog/TitleBanner';
 import VolenteerCard from '../../Components/volenteer-with-us/VolenteerCard';
-import AboutBg from "../../assets/about-title-bg.jpg";
+import AboutBg from "../../assets/all-bg.jpg";
 import About01 from "../../assets/about-01.jpg";
 import About02 from "../../assets/about-02.jpg";
 
