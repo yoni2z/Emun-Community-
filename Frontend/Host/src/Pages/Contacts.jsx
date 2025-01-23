@@ -1,6 +1,6 @@
 import React from "react";
 import TitleBanner from "../components/TitleBanner";
-import CauseTitleBg from "../assets/cause-title-bg.jpg";
+import CauseTitleBg from "../assets/all-bg.jpg";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contacts = () => {
@@ -86,7 +86,7 @@ const Contacts = () => {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-[#834098] text-white py-3 rounded-lg hover:bg-[#009ae6] transition duration-200"
+                  className="w-full bg-[#834098] text-white py-3 rounded-lg hover:bg-black transition duration-200"
                 >
                   Send Message
                 </button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TitleBanner from "../../components/TitleBanner";
-import CauseTitleBg from "../../assets/cause-title-bg.jpg";
+import CauseTitleBg from "../../assets/all-bg.jpg";
 
 const DonationPage = () => {
   const [bankAccounts, setBankAccounts] = useState([]);

@@ -54,3 +54,9 @@
     cursor:pointer;
     
 }
+
+.modal_image {
+    width: 700px;
+    height: 550px;
+    object-fit: cover;
+}
