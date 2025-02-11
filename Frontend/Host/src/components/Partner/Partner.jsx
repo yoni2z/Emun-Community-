@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import image1 from "../../assets/Partners/1.png"
-import image2 from "../../assets/Partners/2.png"
-import image3 from "../../assets/Partners/3.png"
-import image4 from "../../assets/Partners/4.png"
-import "./styles.css"
+import React, { useState, useEffect } from "react";
+import image1 from "../../assets/Partners/1.png";
+import image2 from "../../assets/Partners/2.png";
+import image3 from "../../assets/Partners/3.png";
+import image4 from "../../assets/Partners/4.png";
+import "./styles.css";
 
 export const Partner = () => {
-
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/clients/')
-      .then(response => response.json())
-      .then(data => setPartners(data))
+    fetch("https://axonstroke.org/api/clients/")
+      .then((response) => response.json())
+      .then((data) => setPartners(data))
       .catch((error) => console.error("error fetching clients", error));
   }, []);
 
@@ -27,4 +26,4 @@ export const Partner = () => {
       </div>
     </div>
   );
-}
+};
