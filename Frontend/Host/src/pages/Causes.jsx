@@ -41,7 +41,7 @@ const Causes = () => {
 
   return (
     <div className="font-poppins bg-[#F3F5F7]">
-      <TitleBanner title="Causes" backgroundImage={CauseTitleBg} />
+      <TitleBanner title="CAUSES" backgroundImage={CauseTitleBg} />
       <div className="py-[95px] sm:mx-10 mx-3">
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-8 mx-auto">
           {currentItems.map((cause) => (

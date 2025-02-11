@@ -1,25 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
-import i1 from "../../assets/Donate/donation.jpg";
 
+import KidSmile from "../../assets/Donate/KidSmile.jpg";
 export const Donate = () => {
   return (
     <div className="donate">
       <div className="donate-image">
-        <img src={i1} alt="" />
+        <img src={KidSmile} alt="" />
       </div>
       <div className="donate-text">
         <h2>
-          AN IMPORTANT <br /> EVENT{" "}
+          A LIFE-CHANGING <br /> EXPERIENCE{" "}
           <span>
-            FOR <br /> CHARITY
+            FOR A <br /> GREATER CAUSE
           </span>
         </h2>
         <p>
-          Your generosity can transform lives and bring hope to those in need.{" "}
-          <br />
-          Every donation, big or small, makes a meaningful impact.
+          Your kindness has the power to change lives. <br />
+          Even the smallest act of generosity can spark hope and create a
+          lasting impact.
         </p>
         <div className="donations">
           <a href="">$10</a>
