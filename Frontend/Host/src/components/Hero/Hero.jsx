@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-import image1 from "../../assets/Hero/1.jpg";
-import image2 from "../../assets/Hero/2.jpg";
+import image1 from "../../assets/Hero/4.jpg";
+import image2 from "../../assets/Hero/1.jpg";
 import image3 from "../../assets/Hero/3.jpg";
 import { Link } from "react-router-dom";
 
@@ -9,8 +9,8 @@ const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const backgrounds = [
     { image: `url(${image1})`, className: "background-1" },
-    { image: `url(${image2})`, className: "background-2" },
-    { image: `url(${image3})`, className: "background-3" },
+    // { image: `url(${image2})`, className: "background-2" },
+    // { image: `url(${image3})`, className: "background-3" },
   ];
 
   useEffect(() => {
@@ -41,17 +41,18 @@ const Hero = () => {
       className={`hero-container ${backgrounds[currentImage].className}`}
       style={{
         backgroundImage: backgrounds[currentImage].image,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", // Ensures the image covers the entire div
+        backgroundPosition: "right", // Centers the image
       }}
     >
       <div className="hero-content">
-        <h1 className="hero-title fade-in-text">
-          EMUN COMMUNITY
-        </h1>
-        <p className="hero-subtitle fade-in-text">
-          Give a helping hand to those who need it!
+        <h1 className="hero-title fade-in-text">EMUN COMMUNITY</h1>
+        <p className="montserrat-font hero-subtitle fade-in-text">
+          EMPOWER THE NEXT GENERATION TO BUILD SKILLS AND CAREERS!
         </p>
         <div className="hero-button">
-          <Link to="/about-us" className="fade-in-button">
+          <Link to="/about-us" className="fade-in-start">
             Get Started
           </Link>
           <Link
@@ -59,7 +60,7 @@ const Hero = () => {
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="fade-in-button yellow-button"
+            className="fade-in-donate yellow-button"
           >
             Donate Now
           </Link>

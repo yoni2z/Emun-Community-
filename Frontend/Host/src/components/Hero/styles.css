@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 .hero-content {
   display: flex;
@@ -8,23 +10,26 @@
   color: white;
   z-index: 1;
   margin: 20px;
+  margin-top: 0;
   justify-content: center;
-  height: 100%;
+  
+  /* Center vertically within the hero-container */
+  height: 100vh;
+  /* Take the full height of the hero-container */
 }
 
 .hero-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-family: 'Playfair Display', sans-serif;
   margin-bottom: 10px;
   line-height: 1.2;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-subtitle {
   font-size: 1rem;
   /* font-weight: bold; */
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero-button {
@@ -32,36 +37,41 @@
   flex-direction: column;
   gap: 15px;
   align-items: flex-start;
+  /* Align buttons to the left */
   margin-top: 20px;
+  /* Add spacing between subtitle and buttons */
 }
 
-.hero-button>a {
+.hero-button > a {
   font-size: 1rem;
   font-weight: bold;
   padding: 12px 20px;
-  color: black;
-  background-color: #834098;
+  color: #834098;
+  background-color: white;
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.hero-button>a:hover {
+.hero-button > a:hover {
   background-color: #ffd012;
 }
 
-.hero-button>a:nth-child(2) {
+.hero-button > a:nth-child(2) {
   background-color: #ffd012;
-}
-
-.hero-button>a:nth-child(2):hover {
-  background-color: black;
   color: white;
+}
+
+.hero-button > a:nth-child(2):hover {
+  background-color: #834098;
+  color: #ffd012;
 }
 
 /* Tablets (min-width: 480px) */
 @media (min-width: 480px) {
   .hero-content {
+    height: 100vh;
     align-items: center;
     /* Keep title and subtitle centered */
     text-align: center;
@@ -86,7 +96,7 @@
     /* Center buttons horizontally within hero-content */
   }
 
-  .hero-button>a {
+  .hero-button > a {
     width: auto;
   }
 }
@@ -94,9 +104,11 @@
 /* Small desktops (min-width: 768px) */
 @media (min-width: 768px) {
   .hero-container {
+    height: 100vh;
     justify-content: center;
     /* Center hero-content vertically */
     align-items: center;
+    /* Center hero-content horizontally */
     padding: 50px;
   }
 
@@ -112,7 +124,7 @@
     font-size: 1.5rem;
   }
 
-  .hero-button>a {
+  .hero-button > a {
     padding: 15px 25px;
   }
 }
@@ -123,32 +135,33 @@
     height: 100vh;
     padding: 100px;
     justify-content: center;
-    align-items: start;
+    /* Center the content vertically */
+    align-items: center;
+    /* Center the content horizontally */
   }
 
   .hero-content {
     margin: 0;
+    /* Remove extra margins to center content */
   }
 
   .hero-title {
-    font-size: 5rem;
-    /* font-weight: normal; */
-    
+    font-size: 4rem;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .hero-subtitle {
     font-size: 1.5rem;
-    /* font-weight: normal; */
   }
 
   .hero-button {
     margin-top: 30px;
+    /* Add some space between content and buttons */
     justify-content: flex-start;
     align-self: start;
   }
 
-  .hero-button>a {
+  .hero-button > a {
     padding: 12px 38px;
-    font-weight: normal;
   }
 }

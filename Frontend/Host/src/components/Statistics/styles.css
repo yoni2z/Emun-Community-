@@ -1,42 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 .stats {
-    background: url("../../assets/Statistics/1.jpg");
-    width: 100%;
-    height: auto;
-    padding: 40px 0px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0px;
+  background: url("../../assets/Statistics/2.jpg");
+  width: 100%;
+  height: auto;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px;
+}
+
+.stats > ul {
+  list-style: none;
+  color: #ffd012;
+}
+
+.stats-number {
+  font: 60px 'Playfair Display', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.stats-text {
+  font: 18px 'Playfair Display', sans-serif;
+  margin: 10px 0 0;
+  text-align: center;
+  color: #ffd012;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 479px) {
+  .stats {
+    flex-direction: column;
+    width: 100vw;
   }
-  
-  .stats>ul {
-    list-style: none;
-    color: #ffd012;
-  }
-  
-  .stats-number {
-    font: 60px "Poppins", sans-serif;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .stats-text {
-    font: 18px "Poppins", sans-serif;
-    margin: 10px 0 0;
-    text-align: center;
-    color: white;
-  }
-  @media only screen and 
-  (max-width: 767px) {
-       
-  }
-  @media only screen and (max-width: 479px) {
-       .stats{
-        flex-direction: column;
-        width: 100vw;
-       }
-  }
-  @media only screen and (max-width: 768px) {
-       
-  }
+}
+@media only screen and (max-width: 768px) {
+}

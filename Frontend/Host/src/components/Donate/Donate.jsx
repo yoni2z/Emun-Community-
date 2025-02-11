@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
-import i1 from "../../assets/Donate/1.jpg";
+import i1 from "../../assets/Donate/donation.jpg";
 
 export const Donate = () => {
   return (
@@ -10,15 +11,15 @@ export const Donate = () => {
       </div>
       <div className="donate-text">
         <h2>
-          An Important <br /> Event{" "}
+          AN IMPORTANT <br /> EVENT{" "}
           <span>
-            For <br /> Charity
+            FOR <br /> CHARITY
           </span>
         </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-          Voluptatem adipisci ut provident laboriosam recusandae, <br />
-          rerum doloremque unde at officiis ea qui suscipit est
+          Your generosity can transform lives and bring hope to those in need.{" "}
+          <br />
+          Every donation, big or small, makes a meaningful impact.
         </p>
         <div className="donations">
           <a href="">$10</a>
@@ -26,7 +27,15 @@ export const Donate = () => {
           <a href="">$100</a>
           <a href="">More</a>
         </div>
-        <a href="">Donate Now</a>
+        <Link
+          to="/donate"
+          className="donate-btn"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <a href="">Donate Now</a>
+        </Link>
       </div>
     </div>
   );
