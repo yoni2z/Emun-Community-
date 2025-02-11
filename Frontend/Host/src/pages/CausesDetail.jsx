@@ -44,7 +44,7 @@ const Causes = () => {
 
   return (
     <div className="font-poppins bg-[#F3F5F7]">
-      <TitleBanner title="Causes" backgroundImage={CauseTitleBg} />
+      <TitleBanner title="CAUSES" backgroundImage={CauseTitleBg} />
       <div className="py-[95px] sm:mx-10 mx-3 flex flex-col items-center">
         <CausesCard
           causesImage={causeData.image}
