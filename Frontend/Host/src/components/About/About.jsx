@@ -16,11 +16,14 @@ export const About = () => {
             <span className="span1">What We Do</span>
           </h2>
           <p>
-            Since the very beginning Hope Joomla theme has been about <br />
-            one thing: improving the lives of others by any means. From design,{" "}
+            Since the very beginning, our mission has been clear: empowering
+            young
+            <br /> minds through tutoring and skill-building. From educational
+            support to <br />
+            career guidance, everything we do aims to help teenagers and young{" "}
             <br />
-            solutions and support, everything we do aims to help <br />
-            those who have limited resources.
+            adults gain the knowledge and confidence they need to secure better
+            opportunities.
           </p>
           <Link
             to="/about-us"
@@ -40,8 +43,9 @@ export const About = () => {
             </span>
             <h5>Leave a Legacy</h5>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur adipisicing elit. <br />
+              Empower the next generation by <br />
+              sharing knowledge and skills <br />
+              that create lasting impact.
             </p>
           </div>
           <div className="block2">
@@ -50,9 +54,8 @@ export const About = () => {
             </span>
             <h5>Become a Fundraiser</h5>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur adipisicing elit. <br />
-              Itaque
+              Support education initiatives by <br /> helping raise funds to
+              provide <br /> learning opportunities for young individuals.
             </p>
           </div>
         </div>
@@ -63,9 +66,9 @@ export const About = () => {
             </span>
             <h5>Make a Donation</h5>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur adipisicing elit. <br />
-              Itaque
+              Contribute to educational programs <br /> that equip teens and
+              young adults <br /> with valuable skills for their future
+              careers.
             </p>
           </div>
           <div className="block4">
@@ -74,9 +77,8 @@ export const About = () => {
             </span>
             <h5>Become a Volunteer</h5>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur adipisicing elit. <br />
-              Itaque
+              Share your expertise by tutoring and <br />
+              mentoring young learners, helping <br /> them achieve their goals.
             </p>
           </div>
         </div>
