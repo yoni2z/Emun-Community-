@@ -14,10 +14,10 @@ export const Statistics = () => {
   const [startCounting, setStartCounting] = useState(false);
   useEffect(() => {
     if (startCounting) {
-      countToTarget(2, setDonations, 2000);
-      countToTarget(750, setPeoples, 2000);
+      countToTarget(3, setDonations, 2000);
+      countToTarget(100, setPeoples, 2000);
       countToTarget(400, setVolunteers, 2000);
-      countToTarget(15, setCountries, 2000);
+      countToTarget(3, setCountries, 2000);
     }
   }, [startCounting]);
   const countToTarget = (target, setState, duration) => {
@@ -56,7 +56,7 @@ export const Statistics = () => {
   return (
     <div className="stats" ref={statsRef}>
       <ul>
-        <li className="stats-number">${Donations}M</li>
+        <li className="stats-number">ETB {Donations}M</li>
         <li className="stats-text">Donation</li>
       </ul>
       <ul>
@@ -65,7 +65,7 @@ export const Statistics = () => {
       </ul>
       <ul>
         <li className="stats-number">{Peoples}+</li>
-        <li className="stats-text">Peoples Rescuded</li>
+        <li className="stats-text">Peoples</li>
       </ul>
       <ul>
         <li className="stats-number">{Countries}</li>

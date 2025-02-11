@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TitleBanner from "../components/blog/TitleBanner";
-import BlogsCard from "../components/blog/BlogsCard";
+import BlogDetailCard from "../components/blog/BlogDetailCard";
 import { useParams, useNavigate } from "react-router-dom";
 import BlogRight from "../components/blog/BlogRightColumn";
 import BlogsBg from "../assets/blogs-title-bg.jpeg";
@@ -30,16 +30,20 @@ const Blogs = () => {
   }
 
   const handlePrev = () => {
-    const prevId = parseInt(id) - 1;
-    if (prevId >= 1) {
-      navigate(`/blogs/${prevId}`);
+    const currentIndex = blogs.findIndex((blog) => blog.id === parseInt(id));
+
+    if (currentIndex > 0) {
+      const prevBlogId = blogs[currentIndex - 1].id; // Get the actual previous blog ID
+      navigate(`/blogs/${prevBlogId}`);
     }
   };
 
   const handleNext = () => {
-    const nextId = parseInt(id) + 1;
-    if (nextId <= Object.keys(blogs).length) {
-      navigate(`/blogs/${nextId}`);
+    const currentIndex = blogs.findIndex((blog) => blog.id === parseInt(id));
+
+    if (currentIndex !== -1 && currentIndex < blogs.length - 1) {
+      const nextBlogId = blogs[currentIndex + 1].id; // Get the actual next blog ID
+      navigate(`/blogs/${nextBlogId}`);
     }
   };
 
@@ -48,7 +52,7 @@ const Blogs = () => {
       <TitleBanner title="BLOGS" backgroundImage={BlogsBg} />
       <div className="py-[95px] sm:mx-10 mx-3 grid grid-cols-3 gap-2">
         <div className="col-span-3 sm:col-span-2 flex flex-col items-center">
-          <BlogsCard
+          <BlogDetailCard
             blogsImage={blogData.image}
             Title={blogData.title}
             Description={blogData.description}

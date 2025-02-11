@@ -17,10 +17,7 @@ export const Footer = () => {
         <img src={i1} className="footer-emun" alt="Hope" />
         <div className="hope-address">
           <p>
-            212 Saint James Drive, <br />
-            Lancaster, Pennsylvania,
-            <br />
-            17670
+            Addis Ababa, Ethiopia
           </p>
         </div>
       </div>
@@ -45,10 +42,11 @@ export const Footer = () => {
       </div>
       <div className="impact">
         <h3>OUR IMPACT</h3>
-        <a href="">Child Protection</a>
-        <a href="">Clean Water</a>
-        <a href="">Disaster Relief</a>
+        <a href="">Tutoring & Mentorship</a>
+        <a href="">Skill Development</a>
+        <a href="">Career Readiness</a>
       </div>
+
       <div className="follow">
         <h3>FOLLOW US</h3>
         <div className="follow-social">

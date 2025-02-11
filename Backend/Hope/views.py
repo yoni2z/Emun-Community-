@@ -6,7 +6,10 @@ from .models import (
     Blog, Cause,
     Client,
     Volunteer,
-    BankAccount
+    BankAccount,
+    Program, Project,
+    Resource, ResourceDetail,
+    BoardMember
 )
 
 from .serializer import (
@@ -15,7 +18,10 @@ from .serializer import (
     CauseSerializer,
     ClientSerializer,
     VolunteerSerializer,
-    BankAccountSerializer
+    BankAccountSerializer,
+    ProgramSerializer, ProjectSerializer,
+    ResourceSerializer, ResourceDetailSerializer,
+    BoardMemberSerializer    
 )
 
 # Create your views here.
@@ -43,3 +49,23 @@ class VolunteerViewSet(viewsets.ModelViewSet):
 class BankAccountViewSet(viewsets.ModelViewSet):
     queryset = BankAccount.objects.all()
     serializer_class = BankAccountSerializer
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+class ProgramViewSet(viewsets.ModelViewSet):
+    queryset = Program.objects.all()
+    serializer_class = ProgramSerializer
+
+class ResourceDetailViewSet(viewsets.ModelViewSet):
+    queryset = ResourceDetail.objects.all()
+    serializer_class = ResourceDetailSerializer
+
+class ResourceViewSet(viewsets.ModelViewSet):
+    queryset = Resource.objects.all()
+    serializer_class = ResourceSerializer
+
+class BoardMemberViewSet(viewsets.ModelViewSet):
+    queryset = BoardMember.objects.all()
+    serializer_class = BoardMemberSerializer
