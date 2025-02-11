@@ -10,7 +10,7 @@ import About02 from "../../assets/about-02.jpg";
 const About = () => {
   return (
     <>
-      <TitleBanner title={"About Hope"} backgroundImage={AboutBg} />
+      <TitleBanner title={"ABOUT EMUN"} backgroundImage={AboutBg} />
       <div className={style.about_container}>
         <div className={style.abt_topdiv}>
           <div className={style.abt_desc}>
