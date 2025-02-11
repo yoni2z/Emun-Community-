@@ -9,7 +9,7 @@ export const Partner = () => {
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
-    fetch("https://axonstroke.org/api/clients/")
+    fetch("http://127.0.0.1:8000/api/clients/")
       .then((response) => response.json())
       .then((data) => setPartners(data))
       .catch((error) => console.error("error fetching clients", error));

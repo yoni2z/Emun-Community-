@@ -2,9 +2,9 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./styles.css";
 import { FeaturesCard } from "../Features-Card/Features-Card";
-import i1 from "../../assets/Features/6.jpeg";
+import i1 from "../../assets/Features/6.jpg";
 import i2 from "../../assets/Features/4.jpg";
-import i3 from "../../assets/Features/5.png";
+import i3 from "../../assets/Features/5.jpg";
 
 export const Features = () => {
   return (
@@ -22,25 +22,25 @@ export const Features = () => {
         <div className="features-news">
           <FeaturesCard
             image={i1}
-            title={"Rehabilitation Centers and Support Groups"}
+            title={"Tutoring and Mentorship Programs"}
             description={
-              "Access a directory of stroke rehabilitation centers, clinics, and support groups across Ethiopia and Africa. These centers offer specialized therapy services to aid in recovery, from physical therapy to cognitive rehabilitation."
+              "Explore a range of tutoring and mentorship programs designed to help teenagers and young adults build essential skills. Get guidance from experienced mentors to boost your learning and career prospects."
             }
             link={"/resource-details/1"}
           />
           <FeaturesCard
             image={i2}
-            title={"Stroke Recovery Monitoring Tools"}
+            title={"Job Readiness and Skill Development"}
             description={
-              "Download free tools and worksheets that help stroke survivors and caregivers monitor progress during rehabilitation. These tools are designed to track physical, emotional, and cognitive recovery milestones."
+              "Access resources that prepare you for the job market, including resume building, interview preparation, and skill development courses tailored to various industries."
             }
             link={"/resource-details/3"}
           />
           <FeaturesCard
             image={i3}
-            title={"Stroke Care and Rehabilitation Guidelines"}
+            title={"Entrepreneurship and Career Growth"}
             description={
-              "A resource for healthcare professionals that outlines the latest clinical guidelines for stroke care, including emergency response protocols, rehabilitation best practices, and post-stroke management."
+              "Learn about business development, freelancing opportunities, and career growth strategies to help young individuals start their own ventures or secure meaningful employment."
             }
             link={"/resource-details/4"}
           />
