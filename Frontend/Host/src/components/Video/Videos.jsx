@@ -6,7 +6,7 @@ export const Videos = () => {
   return (
     <>
       <div className="video-container">
-        <h1>WHO IS AXON STROKE FOUNDATION?</h1>
+        <h1>WANT TO KNOW ABOUT EMUN COMMUNITY?</h1>
       </div>
       <div className="video">
         <span className="span">

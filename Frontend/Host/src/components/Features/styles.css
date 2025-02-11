@@ -6,7 +6,7 @@
   padding: 95px 0px 70px;
 }
 .features-span {
-  color: #cc1631;
+  color: #ffd012;
 }
 .features-container {
   display: flex;
@@ -22,7 +22,7 @@
   font-family: 'Playfair Display', sans-serif;
   font-size: 64px;
   line-height: 64px;
-  color: #26358a;
+  color: #ffd012;
   margin-bottom: 15px;
   text-align: center;
 }

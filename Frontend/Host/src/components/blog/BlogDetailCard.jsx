@@ -5,17 +5,13 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 
-const BlogsCard = ({
+const BlogDetailCard = ({
   blogsImage,
   Title,
   Description,
   detailView = false,
   extraFields = {},
 }) => {
-
-  const truncateText = (text, limit) => {
-    return text.length > limit ? text.substring(0, limit) + "..." : text;
-  };
 
   return (
     <div className="flex flex-col bg-white shadow-md rounded-md w-full overflow-hidden font-poppins hover:shadow-2xl ">
@@ -57,7 +53,7 @@ const BlogsCard = ({
             )}
           </div>
         )}
-        <h4 className="text-secondary mb-3">{truncateText(Description, 150)}</h4>
+        <h4 className="text-secondary mb-3">{Description}</h4>
         {/* Continue Reading Link */}
         {!detailView && (
           <a
@@ -86,4 +82,4 @@ const BlogsCard = ({
   );
 };
 
-export default BlogsCard;
+export default BlogDetailCard;
