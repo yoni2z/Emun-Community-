@@ -13,11 +13,12 @@
 .modal_content{
     position:relative;
     max-width: 80%;
-    max-width: 80%;
+    height:97%;
 }
-.modal_image{
+.modal_image img {
     width:100%;
     height:auto;
+
     border-radius: 5px;
 }
 .close_button {

@@ -3,6 +3,8 @@
     display: inline-block;
     overflow: hidden; 
     border-radius: 4px;
+    width:370px;
+    height:361px;
 }
 
 .Curr_photo {
