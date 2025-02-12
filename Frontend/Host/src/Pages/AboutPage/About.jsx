@@ -6,8 +6,17 @@ import VolenteerCard from '../../Components/volenteer-with-us/VolenteerCard';
 import AboutBg from "../../assets/all-bg.jpg";
 import About01 from "../../assets/about-01.jpg";
 import About02 from "../../assets/about-02.jpg";
+import Members from "../../components/Members/Members";
+import { useState,useEffect } from 'react';
 
 const About = () => {
+  const [membersList, setMembersList] = useState([]);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/board-members")
+      .then((response) => response.json())
+      .then((data) => setMembersList(data))
+      .catch((error) => console.error("Error fetching member list", error));
+  }, []);
   return (
     <>
       <TitleBanner title={"ABOUT EMUN"} backgroundImage={AboutBg} />
@@ -59,6 +68,16 @@ const About = () => {
             </button>
           </div>
         </div>
+        <div className={`flex gap-40 p-10 mt-20 mb-40 ${style["scrollbar-custom"]}`} >
+        {membersList.map((member, index) => (
+          <Members
+            key={index}
+            photo={member.image}
+            name={member.name}
+            discription={member.role}
+          />
+        ))}
+      </div>
       </div>
       <VolenteerCard />
     </>
