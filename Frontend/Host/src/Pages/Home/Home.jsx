@@ -15,7 +15,7 @@ export const Home = () => {
   return (
     <>
        <Hero />
-       <Partner />
+       {/* <Partner /> */}
        <About />
        <Donate />
        <Videos />
