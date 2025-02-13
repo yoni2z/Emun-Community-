@@ -22,11 +22,11 @@ export const Features = () => {
         <div className="features-news">
           <FeaturesCard
             image={i1}
-            title={"Tutoring and Mentorship Programs"}
+            title={"Embracing Community: The Power of Helping Others"}
             description={
-              "Explore a range of tutoring and mentorship programs designed to help teenagers and young adults build essential skills. Get guidance from experienced mentors to boost your learning and career prospects."
+              "In a world that often feels divided, the simple act of helping others can bridge gaps and foster connection"
             }
-            link={"/resource-details/1"}
+            link={"/resource-details/2"}
           />
           <FeaturesCard
             image={i2}
@@ -34,15 +34,15 @@ export const Features = () => {
             description={
               "Access resources that prepare you for the job market, including resume building, interview preparation, and skill development courses tailored to various industries."
             }
-            link={"/resource-details/3"}
+            link={"/blogs/2"}
           />
           <FeaturesCard
             image={i3}
-            title={"Entrepreneurship and Career Growth"}
+            title={"Emun Community Hosts 7-Day Training on Math and English"}
             description={
-              "Learn about business development, freelancing opportunities, and career growth strategies to help young individuals start their own ventures or secure meaningful employment."
+              "A comprehensive 7-day training program focusing on math and English was organized by the E-Mun Community in collaboration"
             }
-            link={"/resource-details/4"}
+            link={"/blogs/1"}
           />
         </div>
       </div>
