@@ -24,7 +24,7 @@ const About = () => {
         <div className={style.abt_topdiv}>
           <div className={style.abt_desc}>
             <h1>
-              Empowering the <span>Community</span>
+              Empowering <span>Community</span>
             </h1>
             <p>
               We are dedicated to equipping teenagers and young adults with the
