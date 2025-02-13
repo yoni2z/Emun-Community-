@@ -6,6 +6,7 @@
     gap:100px;
     align-items: center;
     padding: 100px;
+    overflow-x: hidden;
 }
 .abt_topdiv{
     display: flex ;
@@ -102,4 +103,34 @@
 
 .readMoreButton .fas {
     margin-left: 8px;
+}
+
+.scrollbar-custom {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+/* WebKit Browsers (Chrome, Safari) */
+.scrollbar-custom::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #834098;
+    border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #834098;
+}
+
+/* Firefox */
+.scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #834098 white;
 }
