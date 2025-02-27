@@ -5,6 +5,7 @@ import i2 from "../../assets/About/2.svg";
 import i3 from "../../assets/About/3.svg";
 import i4 from "../../assets/About/4.svg";
 import { Link } from "react-router-dom";
+import { Handshake, HeartHandshake, PiggyBank, Users } from "lucide-react"; 
 
 export const About = () => {
   return (
@@ -39,7 +40,7 @@ export const About = () => {
         <div className="about-col1">
           <div className="block1">
             <span>
-              <img src={i1} alt="" />
+              <Handshake size={40} />
             </span>
             <h5>Leave a Legacy</h5>
             <p>
@@ -50,7 +51,7 @@ export const About = () => {
           </div>
           <div className="block2">
             <span>
-              <img src={i2} alt="" />
+              <HeartHandshake size={40} />
             </span>
             <h5>Become a Fundraiser</h5>
             <p>
@@ -62,18 +63,17 @@ export const About = () => {
         <div className="about-col2">
           <div className="block3">
             <span>
-              <img src={i3} alt="" />
+              <PiggyBank size={40} />
             </span>
             <h5>Make a Donation</h5>
             <p>
               Contribute to educational programs <br /> that equip teens and
-              young adults <br /> with valuable skills for their future
-              careers.
+              young adults <br /> with valuable skills for their future careers.
             </p>
           </div>
           <div className="block4">
             <span>
-              <img src={i4} alt="" />
+              <Users size={40} />
             </span>
             <h5>Become a Volunteer</h5>
             <p>
