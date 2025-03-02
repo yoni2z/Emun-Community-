@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 .navbar-container {
   background-color: rgba(0, 0, 0, 0);
@@ -29,7 +31,7 @@
 }
 
 .navbar-logo>a {
-  font: 15px "Poppins" sans-serif;
+  font: 15px "Raleway", sans-serif;
 }
 
 .navbar-logo>a>img {
@@ -54,7 +56,7 @@
 }
 
 .navbar-links>ul>li {
-  font: 14px "Poppins", sans-serif;
+  font: 14px "Raleway", sans-serif;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -70,7 +72,7 @@
 
 a {
   padding: 0;
-  font: 14px "Poppins", sans-serif;
+  font: 14px "Raleway", sans-serif;
   text-align: justify;
   border: none;
   /* color: white; */
@@ -85,7 +87,7 @@ a {
 .donate-btn {
   margin: 13px 0px 10px 0px;
   padding: 8px 27px;
-  font: 14px "Poppins", serif;
+  font: 14px "Raleway", serif;
   font-weight: 400;
   text-align: justify;
   border-radius: 4px;
@@ -124,7 +126,7 @@ a {
   align-items: center;
   color: white;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -162,7 +164,7 @@ a {
   font-size: 13px;
   color: #949494;
   /* Default text color */
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -198,7 +200,7 @@ a {
   font-size: 13px;
   color: #949494;
   /* Default text color */
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease, color 0.3s ease;
