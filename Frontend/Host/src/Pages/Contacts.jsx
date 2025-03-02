@@ -113,7 +113,7 @@ const Contacts = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Montserrat"
+                  className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Quicksand"
                   required
                 />
                 <input
@@ -122,7 +122,7 @@ const Contacts = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Montserrat"
+                  className="p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Quicksand"
                   required
                 />
               </div>
@@ -132,7 +132,7 @@ const Contacts = () => {
                 placeholder="Subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Montserrat"
+                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] font-Quicksand"
                 required
               />
               <textarea
@@ -140,7 +140,7 @@ const Contacts = () => {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] h-32 font-Montserrat"
+                className="w-full p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffd012] h-32 font-Quicksand"
                 required
               ></textarea>
               <button
