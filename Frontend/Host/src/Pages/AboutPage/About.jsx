@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./About.module.css";
 import { Link } from "react-router-dom";
-import TitleBanner from "../../components/blog/TitleBanner";
+import TitleBanner from "../../components/TitleBanner";
 import VolenteerCard from "../../Components/volenteer-with-us/VolenteerCard";
 import AboutBg from "../../assets/all-bg.jpg";
 import About01 from "../../assets/career.jpg";
@@ -19,8 +19,12 @@ const About = () => {
   }, []);
   return (
     <>
-      <TitleBanner title={"ABOUT EMUN"} backgroundImage={AboutBg} />
+      
       <div className={style.about_container}>
+        <div className={style.Gallery_topContainer}>
+        <TitleBanner title={"EMUN COMMUNITY"} backgroundImage={AboutBg} />
+        </div>
+        <div className={style.about_cont_container}>
         <div className={style.abt_topdiv}>
           <div className={style.abt_desc}>
             <h1>
@@ -69,6 +73,7 @@ const About = () => {
               <i className="fas fa-arrow-right ml-2"></i>
             </button>
           </div>
+        </div>
         </div>
       </div>
       <div

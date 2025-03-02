@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./Gallery.module.css";
 import PhotoCard from "../../Components/Gallery/PhotoCard";
 import LightboxModal from "../../Components/Gallery/LightboxModal";
-import TitleBanner from "../../components/blog/TitleBanner";
+import TitleBanner from "../../components/TitleBanner";
 import VolenteerCard from "../../Components/volenteer-with-us/VolenteerCard";
 import GalleryBg from "../../assets/all-bg.jpg";
 
@@ -49,7 +49,7 @@ const Gallery = () => {
     <>
       <div className={style.Gallery_container}>
         <div className={style.Gallery_topContainer}>
-          <TitleBanner title={"Gallery"} backgroundImage={GalleryBg} />
+          <TitleBanner title={"GALLERY"} backgroundImage={GalleryBg} />
         </div>
         <div className={style.Gallery_Text}>
           <h1>
@@ -86,7 +86,6 @@ const Gallery = () => {
           View More
         </button>
       </div>
-      <VolenteerCard />
     </>
   );
 };
