@@ -25,7 +25,7 @@ const DonationPage = () => {
 
   return (
     <div className="font-Raleway bg-[#F3F5F7]">
-      <TitleBanner title="Donate" backgroundImage={CauseTitleBg} />
+      <TitleBanner title="DONATE" backgroundImage={CauseTitleBg} />
       <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
         <div className="flex-grow flex justify-center items-center">
           <div className="w-full max-w-lg bg-white rounded-lg shadow-md p-6">
