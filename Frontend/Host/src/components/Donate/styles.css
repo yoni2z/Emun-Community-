@@ -73,7 +73,7 @@ span {
 
 .donate-text > a {
   font: 16px "Montserrat", sans-serif;
-  padding: 19px 35px;
+  padding: 13px 25px;
   background-color: #834098;
   color: white;
   font-weight: bold;
@@ -156,8 +156,9 @@ span {
     text-align: center;
   }
 
-  .donate-image > img {
-    width: 80%;
+  .donate-image img {
+    object-fit: cover;
+    width: 100%;
   }
 
   .donate-text {
@@ -166,7 +167,7 @@ span {
   }
 
   .donate-text > h2 {
-    font-size: 48px;
+    font-size: 32px;
   }
 
   .donate-text > p {

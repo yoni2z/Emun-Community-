@@ -50,7 +50,7 @@
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero-button > a:hover {
