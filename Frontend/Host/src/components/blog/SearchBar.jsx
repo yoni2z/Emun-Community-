@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchBar() {
   return (
-    <div className="w-full flex items-center justify-center font-poppins">
+    <div className="w-full flex items-center justify-center font-Raleway">
       <input
         type="text"
         placeholder="Search ..."
