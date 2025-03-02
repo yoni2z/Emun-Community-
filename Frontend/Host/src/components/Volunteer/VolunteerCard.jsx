@@ -10,7 +10,7 @@ const VolunteerCard = ({
   instagramUrl,
 }) => {
   return (
-    <div className="flex flex-col items-center shadow-md rounded-md w-fit overflow-hidden font-poppins hover:shadow-2xl ">
+    <div className="flex flex-col items-center shadow-md rounded-md w-fit overflow-hidden hover:shadow-2xl ">
       <img
         src={volunteerImage}
         alt={`${Name}'s Image`}
@@ -18,8 +18,8 @@ const VolunteerCard = ({
       />
       {/* Name and Role */}
       <div className="flex flex-col items-center text-center py-7">
-        <h1 className="font-bold text-2xl">{Name}</h1>
-        <h4 className="text-secondary mb-[15px]">{Role}</h4>
+        <h1 className="font-bold font-Raleway text-2xl">{Name}</h1>
+        <h4 className="text-secondary font-Quicksand mb-[15px]">{Role}</h4>
         {/* Social Media Links */}
         <div className="flex flex-row gap-6">
           {facebookUrl && (
