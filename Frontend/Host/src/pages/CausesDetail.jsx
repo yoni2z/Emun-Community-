@@ -11,14 +11,14 @@ const Causes = () => {
   const [causeData, setCauseData] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/causes/")
+    fetch("http://emuncommunity.org/api/causes/")
       .then((response) => response.json())
       .then((data) => setCauses(data))
       .catch((error) => console.log("error fetching causes ", error));
   }, []);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/causes/${id}`)
+    fetch(`http://emuncommunity.org/api/causes/${id}`)
       .then((response) => response.json())
       .then((data) => setCauseData(data))
       .catch((error) => console.log("error fetching the cause datas ", error));

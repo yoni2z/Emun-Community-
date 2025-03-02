@@ -33,7 +33,7 @@ class ClientSerializer(serializers.ModelSerializer):
 class VolunteerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Volunteer
-        fields = ['id', 'name', 'role', 'email', 'phone_number', 'self_description']
+        fields = ['id', 'name', 'role', 'profile_image', 'email', 'phone_number', 'self_description']
 
 class BankAccountSerializer(serializers.ModelSerializer):
     class Meta:

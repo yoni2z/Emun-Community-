@@ -17,7 +17,7 @@ const Blogs = () => {
   const itemsPerPage = 7;
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/blogs/")
+    fetch("http://emuncommunity.org/api/blogs/")
       .then((response) => response.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.log("error fetching causes ", error));
