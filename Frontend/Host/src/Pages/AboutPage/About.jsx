@@ -1,18 +1,18 @@
-import React from 'react';
-import style from './About.module.css';
-import {Link} from 'react-router-dom';
-import TitleBanner from '../../components/blog/TitleBanner';
-import VolenteerCard from '../../Components/volenteer-with-us/VolenteerCard';
+import React from "react";
+import style from "./About.module.css";
+import { Link } from "react-router-dom";
+import TitleBanner from "../../components/blog/TitleBanner";
+import VolenteerCard from "../../Components/volenteer-with-us/VolenteerCard";
 import AboutBg from "../../assets/all-bg.jpg";
 import About01 from "../../assets/career.jpg";
 import About02 from "../../assets/vision.jpg";
 import Members from "../../components/Members/Members";
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const About = () => {
   const [membersList, setMembersList] = useState([]);
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/board-members")
+    fetch("http://emuncommunity.org/api/board-members")
       .then((response) => response.json())
       .then((data) => setMembersList(data))
       .catch((error) => console.error("Error fetching member list", error));

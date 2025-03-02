@@ -13,7 +13,7 @@ const Gallery = () => {
   const limit = 5; // Number of photos to show at a time
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/gallery/")
+    fetch("http://emuncommunity.org/api/gallery/")
       .then((response) => response.json())
       .then((data) => {
         setPhotos(data);

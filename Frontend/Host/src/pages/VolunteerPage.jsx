@@ -9,7 +9,7 @@ const VolunteerPage = () => {
 
   // Fetch volunteers from the API
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/volunteers/")
+    fetch("http://emuncommunity.org/api/volunteers/")
       .then((response) => response.json())
       .then((data) => setVolunteers(data))
       .catch((error) => console.error("Error fetching volunteers:", error));

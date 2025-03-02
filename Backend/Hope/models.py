@@ -42,6 +42,7 @@ class Client(models.Model):
 class Volunteer(models.Model):
     name = models.CharField(max_length=100, verbose_name="Name")
     role = models.CharField(max_length=100, verbose_name="Role")
+    profile_image = models.ImageField(upload_to="volunteer_images/", blank=True, null=True)
     email = models.EmailField(
         max_length=255,
         verbose_name="Email Address",
