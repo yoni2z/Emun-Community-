@@ -21,10 +21,10 @@ const VolunteerPage = () => {
 
       <div className="py-[95px] mx-10">
         <div className="mb-[77px] text-center">
-          <h1 className="text-4xl font-bold font-poppins mb-5">
+          <h1 className="text-4xl font-bold font-Raleway mb-5">
             A Team of <span className="text-primary">Volunteers</span>
           </h1>
-          <p className="text-secondary max-w-[80%] mx-auto">
+          <p className="text-secondary font-Quicksand max-w-[80%] mx-auto">
             Join our team and get involved! Use your creativity and passion to
             take an active role by fundraising, donating or volunteering.
           </p>
@@ -51,10 +51,10 @@ const VolunteerPage = () => {
         <div className="py-[95px] bg-background">
           <div className="mx-10">
             <div className="mb-[77px] text-center">
-              <h1 className="text-4xl font-bold font-poppins mb-5">
+              <h1 className="text-4xl font-bold font-Raleway mb-5">
                 Become A <span className="text-primary">Volunteer</span>
               </h1>
-              <p className="text-secondary max-w-[80%] mx-auto">
+              <p className="text-secondary font-Quicksand max-w-[80%] mx-auto">
                 If you’re looking for the latest in wireless headphones for your
                 enjoyment and private listening, whether to TV, stereo, home
                 entertainment.

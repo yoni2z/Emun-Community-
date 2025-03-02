@@ -48,10 +48,10 @@ const Contacts = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Side: Contact Info */}
           <div className="p-8">
-            <h1 className="text-3xl text-[#834098] font-PlayfairDisplay mb-5">
+            <h1 className="text-3xl text-[#834098] font-Raleway mb-5">
               CONTACT <span className="text-[#ffd012]">INFO</span>
             </h1>
-            <p className="text-gray-500 mb-6 font-Montserrat">
+            <p className="text-gray-500 mb-6 font-Quicksand">
               Feel free to reach out to us through the following contact details
               or leave your feedback in the form.
             </p>
@@ -59,10 +59,10 @@ const Contacts = () => {
               <div className="flex items-start">
                 <FaEnvelope className="text-[#ffd012] text-xl mt-1" />
                 <div className="ml-4">
-                  <span className="text-lg font-PlayfairDisplay text-gray-800">
+                  <span className="text-lg font-Raleway text-gray-800">
                     Email
                   </span>
-                  <p className="text-gray-500 font-Montserrat">
+                  <p className="text-gray-500 font-Quicksand">
                     info@axonstroke.org
                   </p>
                 </div>
@@ -70,13 +70,13 @@ const Contacts = () => {
               <div className="flex items-start">
                 <FaPhoneAlt className="text-[#ffd012] text-xl mt-1" />
                 <div className="ml-4">
-                  <span className="text-lg font-PlayfairDisplay text-gray-800">
+                  <span className="text-lg font-Raleway text-gray-800">
                     Phone
                   </span>
-                  <p className="text-gray-500 font-Montserrat">
+                  <p className="text-gray-500 font-Quicksand">
                     +251 974 78 88 88
                   </p>
-                  <p className="text-gray-500 font-Montserrat">
+                  <p className="text-gray-500 font-Quicksand">
                     +251 940 15 56 06
                   </p>
                 </div>
@@ -84,14 +84,14 @@ const Contacts = () => {
               <div className="flex items-start">
                 <FaMapMarkerAlt className="text-[#ffd012] text-xl mt-1" />
                 <div className="ml-4">
-                  <span className="text-lg font-PlayfairDisplay text-gray-800">
+                  <span className="text-lg font-Raleway text-gray-800">
                     Address
                   </span>
-                  <p className="text-gray-500 font-Montserrat">
+                  <p className="text-gray-500 font-Quicksand">
                     1st branch: Near American Medical center inside the Sunshine
                     Real-Estate Compound (Meri-Luki)
                   </p>
-                  <p className="text-gray-500 font-Montserrat">
+                  <p className="text-gray-500 font-Quicksand">
                     2nd branch: 500 meters up the road from Wossen Grocery to
                     Kara.
                   </p>
@@ -102,7 +102,7 @@ const Contacts = () => {
 
           {/* Right Side: Feedback Form */}
           <div className="p-8">
-            <h1 className="text-3xl text-[#834098] font-PlayfairDisplay mb-5">
+            <h1 className="text-3xl text-[#834098] font-Raleway mb-5">
               SEND US YOUR <span className="text-[#ffd012]">FEEDBACK</span>
             </h1>
             <form className="space-y-6" onSubmit={handleSubmit}>
