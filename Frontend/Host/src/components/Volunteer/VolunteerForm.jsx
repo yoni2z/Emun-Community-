@@ -5,10 +5,28 @@ const VolunteerForm = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 font-poppins">
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="text" placeholder="Subject" />
-      <textarea name="message" id="message" cols="30" rows="10">
+      <input
+        type="text"
+        placeholder="Name"
+        className="text-gray-600 p-3 rounded-md shadow-sm"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        className="text-gray-600 p-3 rounded-md shadow-sm"
+      />
+      <input
+        type="text"
+        placeholder="Subject"
+        className="text-gray-600 p-3 rounded-md shadow-sm"
+      />
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        className="text-gray-400 p-3 rounded-md shadow-sm h-60"
+      >
         Message
       </textarea>
       <button

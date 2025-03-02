@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import VolunteerCard from "../components/Volunteer/VolunteerCard";
-import VolunteerForm from "../components/Volunteer/VolunteerForm";
-import TitleBanner from "../components/TitleBanner";
-import VolunteerBg from "../assets/volunteer-title-bg.jpg";
+import VolunteerCard from "../../components/Volunteer/VolunteerCard";
+import VolunteerForm from "../../components/Volunteer/VolunteerForm";
+import TitleBanner from "../../components/TitleBanner";
+import VolunteerBg from "../../assets/volunteer-title-bg.jpg";
 
-const VolunteerPage = () => {
+const OurWorkPage = () => {
   const [volunteers, setVolunteers] = useState([]);
 
   // Fetch volunteers from the API
@@ -17,7 +17,7 @@ const VolunteerPage = () => {
 
   return (
     <div className="font-poppins">
-      <TitleBanner title="VOLUNTEER" backgroundImage={VolunteerBg} />
+      <TitleBanner title="OUR WORK" backgroundImage={VolunteerBg} />
 
       <div className="py-[95px] mx-10">
         <div className="mb-[77px] text-center">
@@ -68,4 +68,4 @@ const VolunteerPage = () => {
   );
 };
 
-export default VolunteerPage;
+export default OurWorkPage;
