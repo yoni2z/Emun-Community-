@@ -7,14 +7,14 @@
   background-color: wheat;
   background: url("../../assets/Video/5.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 .video-container h1 {
   font-size: 64px;
   color: #834098;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   margin-bottom: 4rem;
 }
 
@@ -50,23 +50,17 @@
 }
 /* Phones */
 @media only screen and (max-width: 479px) {
-     .video{
-        width: 100vw;
-        overflow: hidden;
-     }
-     .video-container h1{
-      font-size: 40px;
-     }
+  .video {
+    width: 100vw;
+    overflow: hidden;
+  }
+  .video-container h1 {
+    font-size: 40px;
+  }
 }
 /* Tablets */
-@media only screen and 
-(max-width: 767px) {
-  .video-container h1{
-    font-size: 48px;
-   }
-     
-}
-/* Large Screen */
-@media only screen and (min-width: 768px) {
-     
+@media only screen and (max-width: 767px) {
+  .video-container h1 {
+    font-size: 32px;
+  }
 }
