@@ -21,7 +21,7 @@ const OurWorkPage = () => {
 
       <div className="py-[95px] mx-10">
         <div className="mb-[77px] text-center">
-          <h1 className="text-4xl font-bold font-poppins mb-5">
+          <h1 className="text-4xl font-bold font-raleway mb-5">
             A Team of <span className="text-primary">Volunteers</span>
           </h1>
           <p className="text-secondary max-w-[80%] mx-auto">
@@ -51,7 +51,7 @@ const OurWorkPage = () => {
         <div className="py-[95px] bg-background">
           <div className="mx-10">
             <div className="mb-[77px] text-center">
-              <h1 className="text-4xl font-bold font-poppins mb-5">
+              <h1 className="text-4xl font-bold font-raleway mb-5">
                 Become A <span className="text-primary">Volunteer</span>
               </h1>
               <p className="text-secondary max-w-[80%] mx-auto">
