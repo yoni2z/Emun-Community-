@@ -62,7 +62,7 @@ export const Navbar = () => {
               ABOUT US
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/ourwork
             "
@@ -70,7 +70,7 @@ export const Navbar = () => {
             >
               OUR WORK
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to="/gallery" onClick={closeMenu}>
               GALLERY
@@ -106,15 +106,15 @@ export const Navbar = () => {
                     GALLERY
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   <Link
-                    to="/login"
+                    to="/Register"
                     className="dropdown-item"
                     onClick={closeMenu}
                   >
-                    LOGIN FORM
+                    REGISTER
                   </Link>
-                </li> */}
+                </li>
                 {/* <li>
                   <Link
                     to="/registration"

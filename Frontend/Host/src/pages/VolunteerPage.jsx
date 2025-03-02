@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import VolunteerCard from "../components/Volunteer/VolunteerCard";
 import VolunteerForm from "../components/Volunteer/VolunteerForm";
 import TitleBanner from "../components/TitleBanner";
-import VolunteerBg from "../assets/volunteer-title-bg.jpg";
+import AboutBg from "../assets/all-bg.jpg";
 
 const VolunteerPage = () => {
   const [volunteers, setVolunteers] = useState([]);
@@ -17,7 +17,7 @@ const VolunteerPage = () => {
 
   return (
     <div className="font-poppins">
-      <TitleBanner title="VOLUNTEER" backgroundImage={VolunteerBg} />
+      <TitleBanner title="REGISTER" backgroundImage={AboutBg} />
 
       <div className="py-[95px] mx-10">
         <div className="mb-[77px] text-center">
