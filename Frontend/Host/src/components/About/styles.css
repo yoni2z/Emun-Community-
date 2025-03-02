@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 .about {
   margin: 0;
@@ -22,7 +24,7 @@
 }
 
 .about-us-text>h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 48px;
   font-weight: 700;
   margin: 20px 0 25px;
@@ -34,7 +36,7 @@
 }
 
 .about-us-text>p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: normal;
   margin-bottom: 35px;
@@ -52,6 +54,7 @@
   display: inline-block;
   transition: 0.3s ease;
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
 }
 
 .about-us-text>a:hover {
@@ -111,7 +114,7 @@
 .block2 h5,
 .block3 h5,
 .block4 h5 {
-  font: 20px "Poppins", sans-serif;
+  font: 20px 'Raleway', sans-serif;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 1);
   font-weight: 700;
@@ -121,7 +124,8 @@
 .block2 p,
 .block3 p,
 .block4 p {
-  font: 14px "Poppins", sans-serif;
+  font: 14px 'Quicksand',
+    sans-serif;
   color: #666;
   line-height: 1.8;
 }
