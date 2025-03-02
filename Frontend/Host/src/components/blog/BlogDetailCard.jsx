@@ -14,7 +14,7 @@ const BlogDetailCard = ({
 }) => {
 
   return (
-    <div className="flex flex-col bg-white shadow-md rounded-md w-full overflow-hidden font-poppins hover:shadow-2xl ">
+    <div className="flex flex-col bg-white shadow-md rounded-md w-full overflow-hidden font-Raleway hover:shadow-2xl ">
       <img
         src={blogsImage}
         alt="volunteer Image"
@@ -53,12 +53,12 @@ const BlogDetailCard = ({
             )}
           </div>
         )}
-        <h4 className="text-secondary mb-3">{Description}</h4>
+        <h4 className="text-secondary mb-3 font-Quicksand">{Description}</h4>
         {/* Continue Reading Link */}
         {!detailView && (
           <a
             href="#"
-            className="text-button hover:text-black text-left mt-5 mb-3"
+            className="text-button hover:text-black text-left mt-5 mb-3 font-Raleway"
           >
             Continue Reading
           </a>

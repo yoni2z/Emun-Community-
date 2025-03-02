@@ -15,11 +15,11 @@ const VolenteerCard = () => {
         paddingBottom: "70px",
       }}
     >
-      <h1 className="relative z-10 text-white text-center text-[4rem]  font-black tracking-tight leading-snug">
+      <h1 className="relative z-10 text-white text-center text-[4rem] font-black font-Raleway tracking-tight leading-snug">
         Become a Volunteer
       </h1>
       <h4
-        className=" relative z-10 text-white text-center text-[1.6rem]  font-black tracking-tight leading-snug"
+        className=" relative z-10 text-white text-center text-[1.6rem] font-black font-Quicksand tracking-tight leading-snug"
         style={{ fontWeight: "400" }}
       >
         Join us for a better life and beautiful future
@@ -31,7 +31,7 @@ const VolenteerCard = () => {
         }}
       >
         <button
-          className="relative z-10 text-black text-center text-[1.1rem] font-black tracking-tight leading-snug bg-white hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
+          className="relative z-10 text-black font-Raleway text-center text-[1.1rem] font-black tracking-tight leading-snug bg-white hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
           style={{
             padding: "15px 38px",
             fontWeight: "700",
