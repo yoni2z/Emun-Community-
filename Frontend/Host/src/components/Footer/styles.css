@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 .footer {
   padding: 100px 0 85px;
   display: flex;
@@ -18,21 +21,21 @@
 .hope-address > p {
   margin: 0 0 10px;
   color: #949494;
-  font: 14px "Poppins", sans-serif;
+  font: 14px "Quicksand", sans-serif;
   line-height: 1.5;
 }
 .aboutus > h3,
 .help > h3,
 .impact > h3,
 .follow > h3 {
-  font: 16px "Poppins", sans-serif;
+  font: 16px "Raleway", sans-serif;
   margin: 0 0 22px;
 }
 .aboutus > a,
 .help > a,
 .impact > a {
   color: #949494;
-  font: 14px "Poppins", sans-serif;
+  font: 14px "Quicksand", sans-serif;
   padding: 0;
   font-size: 14px;
   letter-spacing: -0.5px;

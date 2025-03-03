@@ -48,7 +48,7 @@ const Blogs = () => {
   };
 
   return (
-    <div className="font-poppins bg-[#F3F5F7]">
+    <div className="font-Raleway bg-[#F3F5F7]">
       <TitleBanner title="BLOGS" backgroundImage={BlogsBg} />
       <div className="py-[95px] sm:mx-10 mx-3 grid grid-cols-3 gap-2">
         <div className="col-span-3 sm:col-span-2 flex flex-col items-center">

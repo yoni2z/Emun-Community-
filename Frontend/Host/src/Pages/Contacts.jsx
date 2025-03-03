@@ -88,12 +88,7 @@ const Contacts = () => {
                     Address
                   </span>
                   <p className="text-gray-500 font-Quicksand">
-                    1st branch: Near American Medical center inside the Sunshine
-                    Real-Estate Compound (Meri-Luki)
-                  </p>
-                  <p className="text-gray-500 font-Quicksand">
-                    2nd branch: 500 meters up the road from Wossen Grocery to
-                    Kara.
+                    Addis Ababa, Ethiopia
                   </p>
                 </div>
               </div>
